@@ -1,0 +1,71 @@
+div {
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    height: 100px;
+    background-color: darkkhaki;
+    display: inline-block;
+}
+#linearGradientSimpleLeftRight{
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, red , yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, red, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, red, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, red , yellow); /* Standard syntax */
+}
+
+#linearGradientSimpleUpDown{
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(red, yellow); /* Standard syntax */
+}
+
+#linearGradientSimpleAngle {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-350deg, red, yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-35deg, red, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-35deg, red, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-35deg, red, yellow); /* Standard syntax */
+}
+
+#linearGradientMultiple{
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(red, yellow, green); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(red, yellow, green); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(red, yellow, green); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(red, yellow, green); /* Standard syntax */
+}
+
+#radialGradientSimple{
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(red, yellow, green); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(red, yellow, green); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(red, yellow, green); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(red, yellow, green); /* Standard syntax */
+}
+
+#radialGradientDiffSize{
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(red 5%, yellow 15%, green 60%); /* Safari 5.1-6.0 */
+    background: -o-radial-gradient(red 5%, yellow 15%, green 60%); /* For Opera 11.6-12.0 */
+    background: -moz-radial-gradient(red 5%, yellow 15%, green 60%); /* For Firefox 3.6-15 */
+    background: radial-gradient(red 5%, yellow 15%, green 60%); /* Standard syntax */
+}
+
+#radialGradientCircle{
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(circle, red, yellow, green); /* Safari */
+    background: -o-radial-gradient(circle, red, yellow, green); /* Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(circle, red, yellow, green); /* Firefox 3.6 to 15 */
+    background: radial-gradient(circle, red, yellow, green); /* Standard syntax */
+}
+
+#radialGradientRepeating{
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-repeating-radial-gradient(red, yellow 10%, green 15%); /* For Safari 5.1 to 6.0 */
+    background: -o-repeating-radial-gradient(red, yellow 10%, green 15%); /* For Opera 11.6 to 12.0 */
+    background: -moz-repeating-radial-gradient(red, yellow 10%, green 15%); /* For Firefox 3.6 to 15 */
+    background: repeating-radial-gradient(red, yellow 10%, green 15%); /* Standard syntax */
+}

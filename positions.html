@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="pozycje, css, position">
+        <meta name="description" content="Strona zawiera przykłady użycia atrubutu pozycje dla obiektów w CSS">
+        <meta name="author" content="Arkadiusz Marcinowski, CrabsterK, Bartosz Przydatek, inspired95">
+        <title> Możliwości ułożenia obiektów w CSS na stronie </title>
+        <link href="css/general.css" rel="stylesheet" type="text/css">
+        <style>
+            
+            div{
+                border: 2px solid black;
+                width:200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <img id="logo" alt="logo" src="img/needanerdHead.png"/>
+    
+        <header id="menu">
+            <script src="js/menu.js"></script>
+        </header>
+        <section>
+            <h2>Możliwości ułożenia obiektów w CSS na stronie</h2>
+            <article>
+                <a id="relative"></a>
+                <h2>relative</h2>
+                <p>Element jest pozycjonowany relatywnie do normalnej pozycji. Np. "left:20px" przesuwa go o 20px w lewo od elementu po lewej.</p>
+                <div>
+                    <img src="img/needanerdHead.png" alt="example img" style="width:150px"/>
+                    <img src="img/background.gif" alt="example img 2" style="position:relative; top:20px; left:-40px;"/>
+                </div>
+            </article>
+
+            <article>
+                <a id="absolute"></a>
+                <h2>absolute</h2>
+                <p>
+                    Elementy są pozycjonowane relatywnie do pierwszego (nie statycznego) elementy - przodka.
+                </p>
+                <div>
+                    <img src="img/needanerdHead.png" alt="example img" style="width:150px"/>
+                    <img src="img/background.gif" alt="example img 2" style="position:absolute; left:5%"/>
+                </div>
+            </article>
+
+            <article>
+                <a id="fixed"></a>
+                <h2>fixed</h2>
+                <p> Element jest pozycjonowany relatywnie do okna przeglądarki</p>
+                <div class="hint">
+                        Patrz menu
+                </div>
+            </article>
+
+            <article>
+                <a id="static"></a>
+                <h2>static</h2>
+                <p>Wartość domyślna. Elementy renderują się w porządku w jakim sa przedstawiane w dokumencie.</p>
+                <div>
+                    <img src="img/needanerdHead.png" alt="example img" style="width:150px"/>
+                    <img src="img/background.gif" alt="example img 2" style="position:static;"/>
+                </div>
+            </article>
+            
+            <article>
+                <a id="sticky"></a>
+                <h2>sticky</h2>
+                <div style="overflow:scroll; float:left";>
+                    <img src="img/needanerdHead.png" alt="example img" style="width:150px;"/>
+                    <img src="img/background.gif" alt="example img 2" style="position:sticky; position: -webkit-sticky; top:0;"/>
+                    ąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąą
+                    ąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąą
+                    ąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąą
+                    ąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąą
+                    ąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąą
+                    ąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąą
+                    ąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąą
+                    ąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąą
+                    ąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąą
+                    ąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąą
+                    ąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąą
+                    ąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąąą
+                </div>
+                <p style= "float: left">
+                    Polega na połączeniu pomiędzy elementami pozycjonowanymi "relitive" oraz "fixed". Zależy od pozycji scrolowania.
+                    <br/>
+                    Tzn. pozycjonuje według "relative" dopóki uzytkownik nie użyje scrola poza ustaloną wcześniej pozycję, po tym zdarzeniu element zachowuje się jak "fixed"
+                </p>
+
+                <p style= "clear: both;">
+                    Polega na połączeniu pomiędzy elementami pozycjonowanymi "relitive" oraz "fixed". Zależy od pozycji scrolowania.
+                    <br/>
+                    Tzn. pozycjonuje według "relative" dopóki uzytkownik nie użyje scrola poza ustaloną wcześniej pozycję, po tym zdarzeniu element zachowuje się jak "fixed"
+                </p>
+                
+
+            </article>
+
+        </section>
+    </body>
+</html>

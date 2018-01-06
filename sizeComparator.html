@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="czcionka, czcionki, bezwzględne, względne, absolute, relative "> 
+        <meta name="description" content=" Strona zawiera porównanie wielkości czcionek względnych i bezwzględnych o tej wartości "> 
+        <meta name="author" content="Arkadiusz Marcinowski, CrabsterK, Bartosz Przydatek, inspired95">
+        <title> Różnice czcionek o tej samej wartości</title>
+        <link href="css/general.css" rel="stylesheet" type="text/css">
+        <style>
+                table{
+                    width: 100%;
+                    text-align: center;
+                }
+                th{
+                    font-size: 40px;
+                    color: red;
+                }
+                th, td{
+                    border: 1px solid black;
+                }
+                #three > td{
+                    border: 1px solid yellow;
+                }
+                #six > td{
+                    border: 2px solid orange
+                }
+                #nine > td{
+                    border: 3px solid red;
+                }
+            </style>
+    </head>
+    
+    
+    <body>
+
+        <img id="logo" alt="logo" src="img/needanerdHead.png"/>
+        
+        <header id="menu">
+            <script src="js/menu.js"></script>
+        </header>
+
+        <section>
+            <h2>Różnice czcionek o tej samej wartości</h2>
+            <article>
+                <h3>Tabela</h3>
+                <table style="border: 1px solid black">
+                    <tr >
+                        <th></th><th>px</th><th>em</th><th>ex</th><th>%</th><th>in</th><th>cm</th><th>mm</th><th>pt</th><th>pc</th>
+                    </tr>
+
+                    <tr id="three">
+                        <th>3</th><td style="font-size:3px">3</td><td style="font-size:3em">3</td><td style="font-size:3ex">3</td><td style="font-size:3%">3</td><td style="font-size:3in">3</td><td style="font-size:3cm">3</td><td style="font-size:3mm">3</td><td style="font-size:3pt">3</td><td style="font-size:3pc">3</td>
+                    </tr>
+
+                    <tr id="six">
+                        <th>6</th><td style="font-size:6px">6</td><td style="font-size:6em">6</td><td style="font-size:6ex">6</td><td style="font-size:6%">6</td><td style="font-size:6in">6</td><td style="font-size:6cm">6</td><td style="font-size:6mm">6</td><td style="font-size:6pt">6</td><td style="font-size:6pc">6</td>
+                    </tr>
+
+                    <tr id="nine">
+                        <th>9</th><td style="font-size:9px">9</td><td style="font-size:9em">9</td><td style="font-size:9ex">9</td><td style="font-size:9%">9</td><td style="font-size:9in">9</td><td style="font-size:9cm">9</td><td style="font-size:9mm">9</td><td style="font-size:9pt">9</td><td style="font-size:9pc">9</td>
+                    </tr>
+
+                </table>
+            </article>
+        </section>
+    </body>
+</html>

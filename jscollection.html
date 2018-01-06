@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="javascript, js, kolekcja, kolekcje, collection">
+        <meta name="description" content="Prezentacja kolekcji w JS">
+        <meta name="author" content="Arkadiusz Marcinowski, CrabsterK, Bartosz Przydatek, inspired95">
+        <title>Kolekcje w JS</title>   
+        <link href="css/general.css" rel="stylesheet" type="text/css">
+        <script src="js/collection.js"></script>
+    </head>
+    
+    <body>
+        <img id="logo" alt="logo" src="img/needanerdHead.png"/>
+            
+        <header id="menu">
+            <script src="js/menu.js"></script>
+        </header>
+        
+
+        <section>
+    
+            <h2>Kolecje w JS</h2>
+            
+            <article>
+               <a id="colletionImagies"></a>
+                <h2>Kolekcja Imagies</h2>
+                
+                <p>
+                    document.imagies - kolekcja elementów HTML o znaczniku 'img'. Właściwość length zwraca rozmiar kolekcji liczony od 0.
+                </p>
+                <p class="hint"> Działa tylko dla elementu 'document'</p>
+                
+                <div id="imagiesCollectionExampleDiv">
+                   <img id="obrazek1" style="width: 20%" src="https://i.pinimg.com/736x/01/c0/1c/01c01c45cb997f16675c5a5825645ceb--funny-happy-birthdays-pictures-of.jpg">
+                   <img id="obrazek2" style="width: 20%" src="http://funnylife.com/wp-content/uploads/2016/07/funny-527.jpg">
+                   <img id="obrazek3" style="width: 20%" src="https://i.ytimg.com/vi/v9oxyswY8fs/maxresdefault.jpg">
+                </div>
+                <button class="btn"  onclick="imagiesFun()">Pokaż źródła wszystkich obrazków na stronie</button>
+                <p id="imagiesResult"></p>
+            </article>
+            
+            <article>
+               <a id="collectionLinks"></a>
+                <h2>Kolekcja Links</h2>
+                
+                <p>
+                    document.links - kolekacja elementów HTML o znacznikach 'a' i/lub 'area'. Właściwość length zwraca rozmiar kolekcji liczony od 0.
+                </p>
+                <p class="hint"> Działa tylko dla elementu 'document'</p>
+                
+                <button class="btn"  onclick="linksFun()">Pokaż źródła wszytkich linków na stronie</button>
+                <div style="width: auto; height: auto; min-width: 0px; border:1px solid black; overflow: scroll;"><p id="linksResult"></p></div>
+            </article>
+            
+            <article>
+               <a id="collectionAnchors"></a>
+                <h2>Kolekcja Anchors</h2>
+                
+                <p>
+                    document.anchors - kolekacja elementów HTML o znaczniku 'a' z atrybutem 'name'. Właściwość length zwraca rozmiar kolekcji liczony od 0.
+                </p>
+                <p class="hint"> Działa tylko dla elementu 'document'</p>
+                <p class="hint"> Atrybut 'name' nie jest wspierany przez HTML5, ale został zachowany dla zgodności wstecznej.</p>
+                <a name="html">Kotiwca 1</a><br>
+                <a name="css">Kotiwca 2</a><br>
+                <a name="xml">Kotiwca 3</a><br>
+                <button class="btn"  onclick="anchorsFun()">Pokaż ilość wszystkich kotwic w dokumencie</button>
+                <p id="achorsResult"></p>
+            </article>
+            
+            <article>
+               <a id="itemProperty"></a>
+                <h2>Właściwość Item</h2>
+                <p>
+                    Pozwala odwołać się do elementu spośród wybranych za pomocą indeksu (zaczynającego się od 0). Elementy są posortowane zgodnie z tym w jakiej kolejności pojawiły się w kodzie źródłowym.
+                </p>
+                <p class="hint"> Działa tylko dla elementu 'document'</p>
+                
+                <button class="btn"  onclick="itemFun()">Pokaż treść n-tego elementu p w dokumencie</button>
+                <p id="itemResult"></p>
+            </article>
+            
+            <article>
+               <a id="namedItemProperty"></a>
+                <h2>Właściwość namedItem</h2>
+                <p>
+                    Pozwala odwołać się do elementu spośród wybranych za pomocą id. Zwraca null jeśli element o podanym id nie istnieje.
+                </p>
+                <p class="hint"> Działa tylko dla elementu 'document'</p>
+                
+                <button class="btn"  onclick="namedItemFun()">Wybierz obrazek</button>
+                <p id="namedItemResult"></p>
+            </article>
+
+        </section>
+
+    </body>
+    
+</html>

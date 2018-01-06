@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="pseudoklasa, pseudoklasy, css, przykład, uzycie">
+        <meta name="description" content="Strona zawiera przykłady oraz krótki opis użycia pseudoklas CSS">
+        <meta name="author" content="Arkadiusz Marcinowski, CrabsterK, Bartosz Przydatek, inspired95">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Przykłady pseudoklas w CSS</title>
+        <link href="css/general.css" rel="stylesheet" type="text/css">
+        <link href="css/pseudoclass.css" rel="stylesheet" type="text/css">
+        <style>
+            .not_example:first-of-type{
+                background-color:white;
+            }
+            .not_example:not(:first-of-type){
+                background-color:black;
+                color:white;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <img id="logo" alt="logo" src="img/needanerdHead.png"/>
+    
+        <header id="menu">
+            <script src="js/menu.js"></script>
+        </header>
+        
+        <section>
+            <h2>Przykłady pseudoklas w CSS</h2>
+
+            <article id="jump">
+                <h3>Skocz do:</h3>
+                <a href="#active">:active</a>
+                <a href="#checked">:checked</a>
+                <a href="#enabled">:enabled & :disabled</a>
+                <a href="#empty">:empty</a>
+                <a href="#first">:first</a>
+                <a href="#first-child">:first-child</a> 
+                <a href="#focus">:focus</a>
+                <a href="#hover">:hover</a>
+                <a href="#last-child">:last-child</a>
+                <a href="#last-of-type">:last-of-type</a>
+                <a href="#link">:link</a>
+                <a href="#not">:not()</a>
+                <a href="#nth-child">:nth-child()</a>
+                <a href="#nth-last-child">:nth-last-child()</a>
+                <a href="#only-child">:only-child</a>
+                <a href="#required">:required</a>
+                <a href="#target">:target</a>
+                <a href="#visited">:visited</a>
+            </article>
+
+            <article class="pseudoclass">
+                <a id="active"></a> 
+                <h2>:active</h2>
+                <p>
+                    Polecenie pozwala nadać określone atrybuty formatowania dla elementów, które zostały aktywowane przez użytkownika. 
+                    Może to mieć miejsce np. kiedy użytkownik wciśnie i przytrzyma przycisk myszki na odsyłaczu - aktywacja będzie miała 
+                    miejsce do momentu zwolnienia przycisku myszki.
+                </p>
+                    <a id="active_example" >Klik</a>
+                    <br/>
+                    <p class="hint">(Kliknij i przytrzymaj)</p>
+            </article>
+
+            <article class="pseudoclass">
+                <a id="checked"></a>
+                <h2>:checked</h2>
+                <p>
+                        Niektóre z pól formularzy pełnią rolę przełączników - można je zaznaczać i odznaczać. W związku z tym może się okazać 
+                        przydatne dodatkowe wizualne wyróżnienie tych kontrolek, które użytkownik zaznaczył.
+                </p>
+                <form>
+                    <input class="checked_example" type="checkbox"/>
+                    <input class="checked_example" type="checkbox"/>
+                </form>
+                <p class="hint">Wybierz opcję</p>
+            </article>
+            
+            <article class="pseudoclass">
+                <a id="enabled"></a>
+                <h2>:enabled & :disabled</h2>
+                <p>
+                        Pola formularza mogą znajdować się w wielu stanach - jednym z nich jest blokada kontrolki. Zablokowane pole 
+                        w większości przeglądarek wyświetlane jest w formie wyszarzonej. Użytkownik nie może do niego wpisywać żadnego 
+                        tekstu ani go włączyć (w przypadku kontrolek typu przełącznik). Blokadę ustala się poprzez przypisanie atrybutu 
+                        disabled="disabled". W odróżnieniu od pól w stanie tylko do odczytu (atrybut readonly="readonly"), pola zablokowane 
+                        nie są w ogóle wysyłane w formularzu. Pole odblokowane to natomiast takie, które nie posiada atrybutu disabled 
+                        (domyślnie).
+                </p>
+                <form>
+                    <input id="disabled_example" type="text" value="Zablokowane" disabled="disabled" />
+                    <input id="enabled_example" type="text" value="Odblokowane" />
+                </form>
+            </article>
+            
+            <article class="pseudoclass">
+                <a id="empty"></a>
+                <h2>:empty</h2>
+                <p>Zdarza się, że w dokumencie (X)HTML znajdują się elementy, które nie zawierają żadnej treści, ani dzieci. Możemy mieć 
+                    z tym do czynienia w przypadku elementów, które z definicji nie posiadają znacznika zamykającego (BR, HR, IMG, INPUT), 
+                    ale również gdy po prostu nie wstawimy do znacznika żadnej treści. Dzięki opisywanemu tutaj selektorowi można nadać takim 
+                    elementom odrębne formatowanie.
+                </p>
+                <p class="empty_example"></p>
+                <p class="empty_example"> </p>
+                <p class="empty_example">To jest akapit</p>
+            </article>
+
+            <article class="pseudoclass">
+                <a id="first-child"></a>
+                <h2>:first-child</h2>
+                <p>Wybiera element, który jest pierwszym dzieckiem rodzica</p>
+                <div>
+                    <p class="first-child_example">Ten akapit jest pierwszym dzieckiem swojego rodzica (div).</p>
+                    <p class="first-child_example">Ten akapit nie jest pierwszym dzieckiem swojego rodzica.</p>
+                </div>
+            </article>
+
+            <article class="pseudoclass">
+                <a id="focus"></a>
+                <h2>:focus</h2>
+                <p>
+                        Polecenie pozwala nadać określone atrybuty formatowania dla elementu (np. odsyłacza lub pola formularza), 
+                        który przyjmuje w danej chwili zogniskowanie. Przykładowo dotyczy to odsyłacza, wybranego za pomocą klawisza 
+                        tabulatora czy pola formularza, w którym znalazł się kursor.
+                </p>
+                <textarea class="focus_example">
+                    Umieść tu kursor
+                </textarea>
+            </article>
+
+            <article class="pseudoclass">
+                <a id="hover"></a>
+                <h2>:hover</h2>
+                <p>
+                        Polecenie pozwala nadać określone atrybuty formatowania dla elementów, nad którymi znajduje się wskaźnik myszki, 
+                        kiedy użytkownik jeszcze ich nie kliknął, tzn. nie zostały jeszcze aktywowane.
+                </p>
+                <p>Jeżeli wskażesz ten <a class="hover_example">odsyłacz</a> będzie on pochylony.</p>
+            </article>
+
+            <article class="pseudoclass">
+                <a id="last-child"></a>
+                <h2>:last-child</h2>
+                <p>Wybiera element, który jest ostatnim dzieckiem rodzica</p>
+                <p>To jest akapit, wewnątrz którego znajduje się <b class="last-child_example">pierwsze pogrubienie</b> oraz <b class="last-child_example">drugie (ostatnie) pogrubienie</b>.</p>
+            </article>
+
+            <article class="pseudoclass">
+                <a id="last-of-type"></a>
+                <h2>:last-of-type</h2>
+                <p>
+                        Załóżmy, że mamy na stronie listę definicyjną, która - jak wiemy - składa się ze znaczników terminów (DT) 
+                        i definicji tych terminów (DD). Chcielibyśmy zmienić sposób formatowania tylko ostatniej definicji listy. 
+                </p>
+                <dl>
+                    <dt class="last-of-type_example">Termin 1</dt><dd>Definicja 1</dd>
+                    <dt class="last-of-type_example">Termin 2</dt><dd>Definicja 2</dd>
+                    <dt class="last-of-type_example">Termin 3</dt><dd>Definicja 3</dd>
+                </dl>
+            </article>
+
+            <article class="pseudoclass">
+                <a id="link"></a>
+                <h2>:link</h2>
+                <p>
+                        Polecenie pozwala nadać określone atrybuty formatowania dla wszystkich podstawowych odsyłaczy na stronie czyli takich, 
+                        które nie zostały jeszcze odwiedzone przez użytkownika.
+                </p>
+                <p>Jeżeli nie byłeś jeszcze na stronie głównej organizacji <a href="https://www.w3.org/" class="link_example">W3C</a>, to ten czcionka osyłacza powinna być większa.</p>
+            </article>
+
+            <article class="pseudoclass" >
+                <a id="not"></a>
+                <h2>:not</h2>
+                <p>
+                    Wyobraźmy sobie sytuację, kiedy chcemy zmienić kolor całego tekstu na stronie z wyjątkiem np. tabelek. Moglibyśmy to 
+                    zrobić, przypisując najpierw określony kolor całemu tekstowi, a następnie przywracając kolor domyślny wszystkim tabelom.
+                    Łatwiej będzie jednak takie działanie połączyć w pojedynczym selektorze negacji. Jeszcze ciekawsze efekty możemy 
+                    uzyskać poprzez połączenie negacji z bardziej złożonymi selektorami - np. pokolorować wszystkie wiersze tabeli z 
+                    wyjątkiem jednego, który podamy za pomocą pseudoklasy podstawionej jako argument negacji.
+                </p>
+                
+                <h3 class="not_example">
+                    IPSUM lorem
+                </h3>
+
+                <h3 class="not_example">
+                    IPSUM lorem
+                </h3>
+
+                <h3 class="not_example">
+                    IPSUM lorem
+                </h3>
+
+            
+            </article>
+
+            <article class="pseudoclass">
+                <a id="nth-child"></a>
+                <h2>:nth-child</h2>
+                <p>
+                        selektor:nth-child(cykl)<br/><br/>
+                        selektorem może być praktycznie dowolny znacznik, przy czym jeśli jest to dziecko zawiera się w znaczniku swojego rodzica<br/>
+                        Cykl określa sposób powtarzania elementów:<br/>
+                        <b>An+B</b><br/>
+                        <b>An</b><br/>
+                        <b>B</b><br/>
+                        (dla n≥0 - liczba naturalna z zerem) gdzie A (okres) i B (przesunięcie początkowe) są liczbami całkowitymi (mogą być dodatnie, ujemne lub wynosić zero) - zobacz szczegółowe wyjaśnienie dalej<br/><br/>
+                        <b>odd</b><br/>
+                        elementy nieparzyste (to samo co: 2n+1)<br/>
+                        <b>even</b><br/>
+                        elementy parzyste (to samo co: 2n)<br/>
+
+                </p>
+                <table >
+                    <tr class="nth-child_example"><td style="border:2px solid black;">Komórka 1.1</td><td style="border:2px solid black;">Komórka 1.2</td></tr>
+                    <tr class="nth-child_example"><td style="border:2px solid black;">Komórka 2.1</td><td style="border:2px solid blue; border-style:dotted solid double dashed;">Komórka 2.2</td></tr>
+                    <tr class="nth-child_example"><td style="border:2px solid black;">Komórka 3.1</td><td style="border-style:dotted">Komórka 3.2</td></tr>
+                    <tr class="nth-child_example"><td style="font-size:25px; border:2px solid black;">Komórka 4.1</td><td style="border:2px solid black;">Komórka 4.2</td></tr>
+                    <tr class="nth-child_example"><td style="font-weight:900; border:2px solid black;">Komórka 5.1</td><td style="border:2px solid black;">Komórka 5.2</td></tr>
+                    <tr class="nth-child_example"><td style="border:2px solid black;">Komórka 6.1</td><td style="font-style: italic; width:50px;">Komórka 6.2</td></tr>
+                </table>
+            </article>
+
+            <article class="pseudoclass">
+                <a id="nth-last-child"></a>
+                <h2>:nth-last-child</h2>
+                <p>Zachowuje się tak samo jak :nth-child, ale od końca</p>
+                <table>
+                    <tr class="nth-last-child_example"><td>Komórka 1.1</td><td>Komórka 1.2</td></tr>
+                    <tr class="nth-last-child_example"><td>Komórka 2.1</td><td>Komórka 2.2</td></tr>
+                    <tr class="nth-last-child_example"><td>Komórka 3.1</td><td>Komórka 3.2</td></tr>
+                    <tr class="nth-last-child_example"><td>Komórka 4.1</td><td>Komórka 4.2</td></tr>
+                    <tr class="nth-last-child_example"><td>Komórka 5.1</td><td>Komórka 5.2</td></tr>
+                    <tr class="nth-last-child_example"><td>Komórka 6.1</td><td>Komórka 6.2</td></tr>
+                </table>
+            </article>
+
+            <article class="pseudoclass">
+                <a id="only-child"></a>
+                <h2>:only-child</h2>
+                <p>
+                        Polecenie pozwala nadać określone atrybuty formatowania dla elementu, który jest dzieckiem innego elementu - o jeden 
+                        rząd niżej w hierarchii drzewa dokumentu, ale tylko jeśli rodzic nie ma już innych dzieci.
+                </p>
+                <p>To jest akapit, który ma <b class="only-child_example">jedno pogrubienie</b></p>
+                <p><b class="only-child_example">To jest</b> akapit, który ma <b class="only-child_example">więcej niż jedno dziecko</b></p>
+            </article>
+
+            <article class="pseudoclass">
+                <a id="required"></a>
+                <h2>:required</h2>
+                <p>Pozwala zmienić wygląd pól, które zawierają atrybut required</p>
+                <input class="required_example" type="text" name="fname" placeholder="not required"><br/>
+                <input class="required_example" type="text" name="fname" placeholder="required" required><br/>
+                <input class="required_example" type="text" name="fname" placeholder="not required">
+            </article>
+
+            <article class="pseudoclass">
+                <a id="target"></a>
+                <h2>:target</h2>
+                <p>
+                    Zmienia wygląd aktualnie wybranej kotwicy.
+                </p>
+                <p><a href="#news1">news1</a></p>
+                <p><a href="#news2">news2</a></p>
+                
+                <p class="hint">Kliknik powyższe linki, a selektor :target wyróźni wybraną kotwicę</p>
+                
+                <p class="target_example" id="news1"><b>news z kotwicą 1</b></p>
+                <p class="target_example" id="news2"><b>news z kotwicą 2</b></p>
+            </article>
+
+            <article class="pseudoclass">
+                <a id="visited"></a>
+                <h2>:visited</h2>
+                <p>
+                    Polecenie pozwala nadać określone atrybuty formatowania dla wszystkich odsyłaczy, które zostały już odwiedzone przez użytkownika.
+                </p>
+                <a class="visited_example" href="https://www.w3schools.com">W3Schools Home</a><br>
+                <a class="visited_example" href="https://www.w3schools.com/html/">W3Schools HTML Tutorial</a><br>
+                <a class="visited_example" href="https://www.w3schools.com/css/">W3Schools CSS Tutorial</a>
+            </article>
+            
+            <article>
+                <a href="first"></a>
+                <h2>:first</h2>
+                <p>(jQuery) Wybiera pierwszy pasujący element. Pasuje tylko do pierwszego elementu, podczas gdy :first-child może pasować do jednego lub wiecej elemetów (po jednym każdego z rodziców) </p>
+                <table style="border: 1px solid black;">
+                  <tr class="first_example"><td class="first_example">Row 1</td></tr>
+                  <tr class="first_example"><td>Row 2</td></tr>
+                  <tr class="first_example"><td>Row 3</td></tr>
+                </table>
+                <br>
+                <table style="border: 1px solid black;">
+                  <tr class="first_example"><td>Row 1</td></tr>
+                  <tr class="first_example"><td>Row 2</td></tr>
+                  <tr class="first_example"><td>Row 3</td></tr>
+                </table>
+            </article>
+        </section>
+        
+    </body>
+</html>

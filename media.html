@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="media, css">
+        <meta name="description" content="Przykład użycia mediów w CSS takich jak zmiana widoku strony przy drukowaniu">
+        <meta name="author" content="Arkadiusz Marcinowski, CrabsterK, Bartosz Przydatek, inspired95">
+        <title> Przykłady użycia @media w CSS </title>
+        <link href="css/general.css" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        <img id="logo" alt="logo" src="img/needanerdHead.png"/>
+        
+        <header id="menu">
+            <script src="js/menu.js"></script>
+        </header>
+        <section>
+            <h2>Przykłady użycia @media w CSS</h2>
+            <article>
+                <h2>@media</h2>
+                <p>
+                    Jedną z najważniejszych zalet stylów jest możliwość określenia, jak będzie wyglądał dokument w różnych mediach: na ekranie,
+                     papierze, z syntezatorem mowy, z urządzeniem do czytania braillem itp.
+                    
+                    Pewne cechy CSS zostały stworzone tylko dla określonych mediów (np. cue-before - sygnał wywoławczy dla medium aural). 
+                    Jednakże różne media mogą dzielić te same własności, lecz często wymagają odmiennych wartości. Na przykład rozmiar czcionki 
+                    (font-size) można ustawić zarówno dla ekranu, jak i dla drukarki, lecz dokumenty na komputerze potrzebują zwykle większej 
+                    czcionki niż na papierze. Podobnie doświadczenie wskazuje, że czcionki z rodziny sans-serif są czytelniejsze na ekranie, 
+                    podczas gdy serif - na papierze. Z tych powodów konieczne jest określenie, że dany arkusz stylów lub jego część jest 
+                    przyporządkowana do pewnego z mediów.
+                </p>
+                <p class="hint">Na tej stronie zastosowano zmienię koloru obramowania artykułów zależne od rozmiaru okna oraz zmianę wyglądy strony
+                    gdy jest drukowana.
+                </p>
+            </article>
+        </section>
+    </body>
+</html>

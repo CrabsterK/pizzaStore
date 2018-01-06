@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="font, czcionka, css ">
+        <meta name="description" content="Przykłady manipulacji czcionką na stronie dzięki CSS">
+        <meta name="author" content="Arkadiusz Marcinowski, CrabsterK, Bartosz Przydatek, inspired95">
+        <title> Przykłady manipulacji czcionką w CSS </title>
+        <link href="css/general.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+        <style>
+            p.small{
+                line-height: 70%;
+            }
+            p.big{
+                line-height: 200%;
+            }
+            p.serif {
+                font-family: "Times New Roman", Times, serif;
+            }
+            p.sansserif {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            @font-face {
+                font-family: myFirstFont;
+                src: url(font/Quicksand-Regular.otf);
+            }
+        </style>
+    </head>
+    
+    <body>
+        <img id="logo" alt="logo" src="img/needanerdHead.png"/>
+            
+        <header id="menu">
+            <script src="js/menu.js"></script>
+        </header>
+        <section>
+            <h2>Przykłady manipulacji czcionką w CSS</h2>
+            <article>
+                <h2>font-weight</h2>
+                <p>Definiuje pogrubienie czcionki.
+                <br/>
+                Wartości:
+                <br/>
+                normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | inherit
+                </p>
+                <p class="hint">Wartość 100 to minimalne pogrubienie, natomiast 900 to maksymalne pogrubienie.</p>
+
+                <p style="font-weight:100">Font-weight - 100</p>
+                <p style="font-weight:600">Font-weight - 600</p>
+                <p style="font-weight:900">Font-weight - 900</p>
+            </article>
+
+            <article>
+                <h2>font-style</h2>
+                <p>
+                    Definiuje kroje czcionki normal, italic oraz oblique spośród rodziny czcionek.
+                    <br/>
+                    Wartości:
+                    <br/>
+                    normal|italic|oblique
+                </p>
+                
+                <p style="font-style:normal">normal</p>
+                <p style="font-style:italic">italic</p>
+                <p style="font-style:oblique">oblique</p>
+                
+            </article>
+
+            <article>
+                <h2>font-variant</h2>
+                <p>
+                    Za pomocą własności font-variant (ang. wariant czcionki) możemy wybrać wariant czcionki pomiędzy normalnym (domyślna wartość), a tzw. small-caps (ang. małe wersaliki).
+                </p>
+                <p style="font-variant:normal">Ala ma kota</p>
+                <p style="font-variant:small-caps">Ala ma kota</p>
+            </article>
+
+            <article>
+                <h2>line-height</h2>
+                <p>
+                    Określa odległość między liniami tekstu.
+                    <br/>
+                    Wartości:
+                    <br/>
+                    normal|number|length
+                </p>
+                <p>
+                        To jest akapit, którego wartość atrybutu line-height oznaczona jest jako normal
+                        <br/>
+                        To jest akapit, którego wartość atrybutu line-height oznaczona jest jako normal
+                        <br/>
+                        To jest akapit, którego wartość atrybutu line-height oznaczona jest jako normal
+                    </p>
+                <p class="small">
+                    To jest akapit z wartością atrybutu line-height wynoszacą 70%
+                    <br/>
+                    To jest akapit z wartością atrybutu line-height wynoszacą 70%
+                    <br/>
+                    To jest akapit z wartością atrybutu line-height wynoszacą 70%
+                </p>
+                <p class="big">
+                        To jest akapit z wartością atrybutu line-height wynoszacą 200%
+                        <br/>
+                        To jest akapit z wartością atrybutu line-height wynoszacą 200%
+                        <br/>
+                        To jest akapit z wartością atrybutu line-height wynoszacą 200%
+                    </p>
+            </article>
+
+            <article>
+                <h2>font-family</h2>
+                <p>
+                    Określa czcionke dla elementu
+                </p>
+                <p>
+                    Może zawierać nazwy kilku czcionek co jest nazywane jako "fallback system". If przeglądarka nie wspiera pierwszej podanej czcionki, próbuje kolejną.
+                </p>
+                <p>
+                   Są dwa rodzaje nazw czcionek:
+                <br/>
+                    <i>family-name</i> - nazwy czcionek takie jak "times", "courier", "arial", etc
+                    <br/>
+                    <i>generic-family</i> - nazwy rodzin czcionek takie jak "serif", "sans-serif", "cursive", "fantasy", "monospace".
+                </p>
+                <p>
+                    Rozpoczyna z czcionką, która wybrałeś i zawsze kończy z rodziną czcionki, aby pozwolić przeglądarce wybrać podobną czcionkę z rodzinny czcionek, którą wbrałeś.
+                </p>
+                <p class="hint">
+                    Każdą wartość oddziel przecinkiem.
+                    <br/>
+                    Jeśli nazwa czcionk zawiera białą spację użyj cudzysłowia.
+                    <br/>
+                    Użyj pojedynczego cudzysłowia jeśli nazwe czcionki zapisuje w "stylu" atrybutu HTML.
+                </p>
+                <p class="serif">Ten paragral został zapisany czcionką Times New Roman.</p>
+                <p class="sansserif">Ten paragraf został zapisany czcionką Arial.</p>
+            </article>
+            
+            <article>
+               <a id="textschadow"></a>
+                <h2>text-shadow</h2>
+                <p>
+                    W celu dodania efektu cienia do tekstu możemy posłużyć się własnością text-shadow (ang. cień tekstu).
+                </p>
+                <p>
+                    Zapisujemy ją w następujący sposób
+                    <br>
+                    text-shadow: x y blur-radius color;
+                    <br>
+                    <br>
+                    x - przesunięcie cienia w poziomie w px
+                    <br>
+                    y - przesunięcie cienia w pionie w px
+                    <br>
+                    blur-radius - rozmycie cienia w px (opcjonalnie)
+                    <br>
+                    color - kolor cienia (opcjonalnie)
+                </p>
+                <p style="text-shadow: 1px 1px 0 black;">Wartość rozmycia 0</p>
+                <p style="text-shadow: 1px 1px 5px black; ">Wartość rozmycia 5px</p>
+                <p style="text-shadow: 1px 1px 15px black;">Wartość rozmycia 15px</p>
+            </article>
+            
+            <article>
+               <a id="fontface"></a>
+                <h2>@font-face</h2>
+                <p style="font-family: myFirstFont">
+                    Tekst pisany czcionką zdefniowaną przez @font-face.
+                </p>
+                
+            </article>
+            
+            <article>
+               <a id="googlfont"></a>
+                <h2>Google fonts</h2>
+                <p style="font-family: 'Indie Flower', cursive; font-size: 30px;">
+                    Tekst pisany czcionka z Google Fonts.
+                </p>
+                
+            </article>
+        </section>
+    </body>
+</html>

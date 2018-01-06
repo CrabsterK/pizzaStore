@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="obramowanie, border, image, slice">
+        <meta name="description" content="Stona prezentuje możliwość użycia obrazka jako obramowania"> 
+        <meta name="author" content="Arkadiusz Marcinowski, CrabsterK, Bartosz Przydatek, inspired95">
+        <title>Obramowanie obrazowe</title>
+        <link href="css/general.css" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+
+        <img id="logo" alt="logo" src="img/needanerdHead.png"/>
+            
+        <header id="menu">
+            <script src="js/menu.js"></script>
+        </header>
+        
+
+        <section>
+    
+            <h2>Obramowanie obrazowe</h2>
+            
+            <article>
+               <a id="borderImageSource"></a>
+                <h2>border-image-source</h2>
+                
+                <p>
+                    Pozwala wybrać obrazek jaki będzie tłem obramowania.
+                    <br><br>
+                    Wartości:
+                    <br>
+                    none|image (np. url(border.png) )|initial
+                </p>
+                
+            </article>
+            
+            <article>
+               <a id="borderImageSource"></a>
+                <h2>border-image-slice</h2>
+                
+                <p>
+                    Definiuje jak przyciąć obrazek na obramowanie
+                    <br><br>
+                    Wartości:
+                    <br>
+                    number|%|fill|initial
+                </p>
+                
+                <p style="text-align: center; width: 20%; border: 15px solid transparent;padding: 15px;border-image: url(img/border.png);border-image-slice:20% 25%;">
+                    Hello world!
+                </p>
+                
+            </article>
+            
+            <article>
+               <a id="borderImageRepeat"></a>
+                <h2>border-image-repeat</h2>
+                
+                <p>
+                    Specyfikuje jak obramowanie ma być powtarzanie
+                    <br><br>
+                    Wartości:
+                    <br>
+                    stretch|repeat|round|initial
+                </p>
+                
+                <p style="text-align: center; width: 20%; border: 15px solid transparent;padding: 15px;border-image: url(img/border.png);border-image-slice:20% 25% fill;border-image-repeat: strech;">
+                    Hello world!
+                </p>
+                
+                <p style="text-align: center; width: 20%; border: 15px solid transparent;padding: 15px;border-image: url(img/border.png);border-image-slice:20% 25% fill;border-image-repeat:  repeat;">
+                    Hello world!
+                </p>
+                
+                <p style="text-align: center; width: 20%; border: 15px solid transparent;padding: 15px;border-image: url(img/border.png);border-image-slice:20% 25% fill;border-image-repeat: round;">
+                    Hello world!
+                </p>
+                
+            </article>
+
+        </section>
+
+    </body>
+    
+</html>

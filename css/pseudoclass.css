@@ -1,0 +1,129 @@
+#jump > a{
+    text-decoration: none;
+    color: yellow;
+    font-weight: 900;
+    margin: 30px;
+}
+#jump{
+    text-align: center;
+}
+/*PSEUDOCLASS :active*/
+#active_example{
+    color: red;
+}
+#active_example:active{
+    color:blue;
+    font-size: 25px;
+    font-weight: bolder;
+    text-decoration: line-through;
+}
+
+/*PSEUDOCLASS :checked*/
+.checked_example:checked{ 
+    height: 50px;
+    width: 50px;
+}
+
+/*PSEUDOCLASSES :disabled & :enabled*/
+#disabled_example:disabled { 
+    border: 1px solid blue 
+}
+#enabled_example:enabled { 
+    border: 1px solid red 
+}
+
+/*PSEUDOCLASS :empty*/
+.empty_example:empty {
+    border: 3px solid green;
+    height: 20px; 
+}
+
+/*PSEUDOCLASS :first-child*/
+.first-child_example:first-child{
+    background-color: yellow;
+}
+
+/*PSEUDOCLASS :focus*/
+.focus_example:focus{
+    color: white; 
+    background-color: black
+}
+
+/*PSEUDOCLASS :hover*/
+.hover_example{
+    color:red;
+}
+.hover_example:hover{
+    font-style: italic;
+}
+
+/*PSEUDOCLASS :last-child*/
+.last-child_example:last-child{
+    color: red;
+}
+
+/*PSEUDOCLASS :last-of-type*/
+.last-of-type_example:last-of-type { 
+    font-style: italic; 
+}
+
+/*PSEUDOCLASS :link*/
+.link_example:link{
+    font-size: 25px;
+}
+
+/*PSEUDOCLASS :not*/
+
+
+/*PSEUDOCLASS :nth-child*/
+.nth-child_example:nth-child(3n+1) { 
+    color: yellow; 
+    background-color: red;
+    border: 3px solid black; 
+}
+.nth-child_example:nth-child(3n+2) { 
+    color: maroon; 
+    background-color: orange;
+    border-style:dotted solid double dashed;
+}
+.nth-child_example:nth-child(3n+3) { 
+    color: red; 
+    background-color: yellow;
+    height: 100px; 
+}
+
+/*PSEUDOCLASS :nth-last-child*/
+.nth-last-child_example:nth-last-child(odd){
+    
+    color: white;
+     background-color: gray;
+}
+.nth-last-child_example:nth-last-child(even){
+    color: gray; 
+     background-color: white;
+}
+
+/*PSEUDOCLASS :only-child*/
+.only-child_example:only-child{
+    font-size: 25px;
+}
+
+/*PSEUDOCLASS :reguired*/
+.required_example:required {
+    background: red;
+  }
+
+/*PSEUDOCLASS :target*/
+.target_example:target{
+    border: 2px solid #D4D4D4;
+    background-color: #e5eecc;
+}
+/*PSEUDOCLASS :visited*/
+  .visited_example:visited{
+    color: darkmagenta;
+  }
+/*PSEUDOCLASS :first*/
+.first_example:first{
+    color:red;
+    font-style: italic;
+}

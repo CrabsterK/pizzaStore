@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="color, kolor, rgba, hsla">
+        <meta name="description" content="Prezentacja dwóch możliwości wprowadzania koloru w CSS">
+        <meta name="author" content="Arkadiusz Marcinowski, CrabsterK, Bartosz Przydatek, inspired95">
+        <title>RBGA i HSLA w CSS</title>
+        <link href="css/general.css" rel="stylesheet" type="text/css">
+        
+        <style>
+            #hslaImg{
+                width: 55%;
+            }
+            tr, th, td{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    
+    <body>
+
+        <img id="logo" alt="logo" src="img/needanerdHead.png"/>
+            
+        <header id="menu">
+            <script src="js/menu.js"></script>
+        </header>
+        
+
+        <section>
+    
+            <h2>Przykłady pokazujące używanie kolorów w formacie RGBA oraz HSLA w CSS</h2>
+            
+            <article>
+               <a id="rgba"></a>
+                <h2>Kolory w formacie RGBA</h2>
+                
+                <p>
+                    Kolory w tym formacie są rozszerzeniem formatu RGB. Dodatkowo zawierają kanał alfa - przezroczystość obiektu.
+                    <br>
+                    Zapisywany jest jako 
+                    <br>
+                    rgba(red, green, blue, alpha),
+                    <br>
+                    gdzie <i>red</i>, <i>green</i> oraz <i>blue</i> przyjmują wartości z przedziału 0 - 255, natomiast <i>alpha</i> przyjmuje wartość 0(pełna przezroczystość) - 1(całkowicie nieprzezroczysty)
+                </p>
+                
+                <h3>Przykłady:</h3>
+                <p style="color: rgba(255, 0, 0, 0.9)">rgba(255, 0, 0, 0.9)</p>
+                <p style="color: rgba(0, 255, 0, 0.5)">rgba(0, 255, 0, 0.5)</p>
+                <p style="color: rgba(0, 0, 255, 0.1)">rgba(0, 0, 255, 0.1)</p>
+            </article>
+            
+            <article>
+               <a id="hsla"></a>
+                <h2>Kolory w formacie HSLA</h2>
+                <p>Wartości koloru w HSLA są rozszerzeniem HLS, podobnie jak w RGBA, dodany został kanał alfa.
+                    <br>
+                    Wartość koloru jest definiowana w następujący sposób
+                    <br>
+                    hsla(hue, saturation, lightness, alpha)
+                    <br>
+                    gdzie   
+                </p>
+                <table>
+                    <tr>
+                        <th>hue - barwa</th>    <th>saturation - nasycenie</th>    <th>lightness - jasność</th>    <th>alpha - przezroczystość</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Liczba całkowita określana w stopniach z przedziału 0 - 360 z tzw. koła barw. 0 - czerwony (Red), 120 - zielony (Green), 240 - niebieski (Blue)</td>    <td>Wartość procentowa: 0% - szary, 100% - normalny</td>    <td>Wartość procentowa: 0% - czarny, 50% - normalny, 100% - biały</td>    <td>przyjmuje wartość 0(pełna przezroczystość) - 1(całkowicie nieprzezroczysty)</td>
+                    </tr>
+
+                </table>
+                <img id="hslaImg" style="margin: 0 auto;" src="img/hsl.png" />
+            </article>
+        </section>
+
+    </body>
+    
+</html>

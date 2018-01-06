@@ -1,0 +1,100 @@
+/*KEY FRAMES*/
+#keyframes {
+    text-align:center;
+    width: 100px;
+    height: 100px;
+    animation:divAnimationExample 12s infinite;
+    -webkit-animation:divAnimationExample 12s infinite; /* dla Google Chrome, Safari, Opera 15+ */
+}
+@keyframes divAnimationExample {
+    0% { background-color:white; }
+    25% { background-color:gold; }
+    50% { background-color:red; width: 400px; margin: 50px;}
+    75% { background-color:green; height: 200px;}
+    100% { background-color:white; }
+}
+
+@-webkit-keyframes divAnimationExample { /* dla Google Chrome, Safari, Opera 15+ */
+    0% { background-color:white; }
+    25% { background-color:gold; }
+    50% { background-color:red; width: 400px; margin: 50px;}
+    75% { background-color:green; height: 200px;}
+    100% { background-color:white; }
+}
+
+/*PENETRATION przenikanie obrazków*/
+#penetrationImg1{
+    opacity: 1;
+    animation:imgPenetration1 12s infinite;
+    -webkit-animation:imgPenetration1 6s infinite; /* dla Google Chrome, Safari, Opera 15+ */
+}
+
+@keyframes imgPenetration1{
+    0% {opacity:1}
+    50%{opacity: 0}
+    100%{opacity: 1}
+}
+
+@-webkit-keyframes imgPenetration1{
+    0% {opacity:1}
+    50%{opacity: 0}
+    100%{opacity: 1}
+}
+
+#penetrationImg2{
+    opacity: 0;
+    animation:imgPenetration2 12s infinite;
+    -webkit-animation:imgPenetration2 6s infinite; /* dla Google Chrome, Safari, Opera 15+ */
+}
+
+@keyframes imgPenetration2{
+    0% {opacity:0}
+    50% {opacity: 1}
+    100%{opacity: 0}
+}
+
+@-webkit-keyframes imgPenetration2{
+    0% {opacity:0}
+    50% {opacity: 1}
+    100%{opacity: 0}
+}
+
+/*TRANSFORM*/
+.transform {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin:20px;
+    border: 2px solid black;
+    display: inline-grid;
+}
+
+#rotateX {
+    transform:perspective(300px) rotateX(45deg);
+}
+
+#scaleX {
+    transform:scaleX(1.25);
+}
+
+#skew {
+    transform:skew(30deg, 20deg);
+}
+
+#rotate3D {
+    transform:perspective(300px) rotate3d(1, 1, 1, 45deg);
+}
+
+/*TRANSITIONS*/
+#transition{
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 4s;
+}
+
+#transition:hover {
+    width: 300px;
+    height: 200px;
+}

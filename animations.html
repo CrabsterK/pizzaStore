@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="animacja, animacje, animation, tranform, trasition, keyframes">
+        <meta name="description" content="Strona prezentuje przykładowe użycia animacji, których możliwości dostępne w CSS3">
+        <meta name="author" content="Arkadiusz Marcinowski, CrabsterK, Bartosz Przydatek, inspired95">
+        <title>Prezentacja technik animacji</title>
+        <link href="css/general.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/animations.css">
+    </head>
+    
+    <body>
+
+        <img id="logo" alt="logo" src="img/needanerdHead.png"/>
+            
+        <header id="menu">
+            <script src="js/menu.js"></script>
+        </header>
+        
+
+        <section>
+    
+            <h2>Animacje w CSS</h2>
+            
+            <article>
+               <a id="keyframesAnimation"></a>
+                <h2>@keyframes</h2>
+                
+                <p>
+                    Jedną z nowości CSS jest animacja. Dodanie animacji do elementu HTML jest bardzo proste. Możemy wykorzystać do tego celu właściwość animation.
+                </p>
+                
+                <div id="keyframes"></div>
+                
+                <div id="penetration" style="position: relative">
+                    <img src="img/penetrationImg1.png" id="penetrationImg1" style="width: 200px; position: absolute; top:2px; left:20x; z-index: 100;"> 
+                
+                    <img src="img/penetrationImg2.png" id="penetrationImg2" style="width: 200px; position: relative; left -300px; z-index: 99">
+                </div>
+                
+            </article>
+            
+            <article>
+               <a id="transformAnimation"></a>
+                <h2>Transform</h2>
+                
+                <p>
+                    Za pomocą właściwości transform możemy przekształcić interesujący nas element HTML w przestrzeni 2D lub 3D.
+                </p>
+                
+                <div class="transform" id="rotateX"></div>
+                <div class="transform" id="scaleX"></div>
+                <div class="transform" id="skew" ></div>
+                <div class="transform" id="rotate3D" ></div>
+            </article>
+            
+            <article>
+               <a id="transitionAnimation"></a>
+                <h2>Transition</h2>
+                
+                <p>
+                    Aby utworzyć efekt transition w danym elemencie HTML musimy wykonać kilka czynności. Po pierwsze musimy utworzyć dodatkowy wygląd dla danego elementu HTML, który zostanie aktywowany w jakiś dynamiczny sposób, np. w momencie gdy najedziemy na jego obszar kursorem myszki
+                </p>
+                
+                <div id="transition"></div>
+            </article>
+
+        </section>
+
+    </body>
+    
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="float, clear, css, opływanie">
+        <meta name="description" content="Strona zawiera przykłady opływania elementów przez inne dzięki CSS">
+        <meta name="author" content="Arkadiusz Marcinowski, CrabsterK, Bartosz Przydatek, inspired95">
+        <title> Przykłady pokazujące opływanie w CSS </title>
+        <link href="css/general.css" rel="stylesheet" type="text/css">
+        <style>    
+            div{
+                border: 2px solid black;
+                width:200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    
+    <body>
+
+        <img id="logo" alt="logo" src="img/needanerdHead.png"/>
+            
+        <header id="menu">
+            <script src="js/menu.js"></script>
+        </header>
+
+        <section>
+            <h2>Przykłady pokazujące opływanie w CSS </h2>
+            <article>
+                <h2>float</h2>
+                <p>Służy do tworzenia obiektów pływających przy lewej lub prawej krawędzi elementu, w którym się znajdują.
+                    <br/>
+                    Wartości:
+                    <br/>
+                    none|left|right|both
+                </p>
+                <div style="width: 500px; height: 200px;">
+                    <img alt="example img" src="img/needanerdHead.png" style="height:150px; float:right">
+                    <p>
+                        Ala ma kota. Ala ma kota. Ala ma kota.  
+                    </p>
+                    <p>
+                        Ala ma kota. Ala ma kota. Ala ma kota. 
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h2>clear</h2>
+                <p>
+                    Ponieważ obiekty z float są wyjęte z normalnego biegu dokumentu, mogą rozciągać się nad kilkoma innymi — np. ilustracja może rozciągać się z boku kilku akapitów.
+                    <br/>
+                    Aby uniknąć tego efektu należy jakiemuś elementowi za elementem z float nadać właściwość clear — powoduje ona ponowne „złączenie” float z biegiem dokumentu.
+                </p>
+                <div style="width: 500px; height: 200px;">
+                        <img alt="example img" src="img/needanerdHead.png" style="height:150px; float:right">
+                        <p>
+                            Ala ma kota. Ala ma kota. Ala ma kota.  
+                        </p>
+                        <p style="clear:both">
+                            Ala ma kota. Ala ma kota. Ala ma kota. 
+                        </p>
+                </div>
+            </article>
+
+        </section>
+
+
+    </body>
+</html>
