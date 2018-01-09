@@ -9,18 +9,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="pl">
     <head>
@@ -58,14 +46,7 @@
             <h2>Menu Pizza</h2>
             
             <article style="height: 900px; ">
-
-
-
-
-
-
            	  <br><br><br>
-
 
 
            	   <?php

@@ -50,14 +50,14 @@
 
                                 <td>  
                                     <h3>NAPOJE</h3>
-                                    <a href =\"drinkmenu.html\">
+                                    <a href =\"drinkmenu.php\">
                                         <img id=\"polecanePic\" src=\"img/menudrinks.jpg\">
                                     </a>
                                 </td>
 
                                 <td>  
                                     <h3>SAŁATKI</h3>
-                                    <a href =\"saladmenu.html\">
+                                    <a href =\"saladmenu.php\">
                                         <img id=\"polecanePic\" src=\"img/menusalad.jpg\">
                                     </a>
                                 </td>
