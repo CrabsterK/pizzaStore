@@ -36,27 +36,32 @@
             
            <article style="height: 700px; ">
                  <br><br><br> <br>
-                   <ul id=polecaneRow>
-                        <li>    
-                            <h3>Sałatka grecka!</h3>
-                            <a href ="product.html">
-                                <img id="polecanePic" src="img/greek.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <h3>Pizza hawajska!</h3>
-                            <a href ="product.html">
-                                <img id="polecanePic" src="img/hawai.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <h3>Pizza peperoni!</h3>
-                            <a href ="product.html">
-                                <img id="polecanePic" src="img/peperoni.jpg">
-                            </a>
-                        </li>
-                   </ul>
-                    
+                  <?php
+                        echo 
+                        "<table style=\"width:100%; text-align: center;\" >
+                             <tr>
+                                <td>  
+                                    <h3>PIZZA</h3>
+                                    <a href =\"product.html\">
+                                        <img id=\"polecanePic\" src=\"img/greek.jpg\">
+                                    </a>
+                                </td>
+
+                                <td>  
+                                    <h3>NAPOJE</h3>
+                                    <a href =\"product.html\">
+                                        <img id=\"polecanePic\" src=\"img/hawai.jpg\">
+                                    </a>
+                                </td>
+
+                                <td>  
+                                    <h3>SAŁATKI</h3>
+                                    <a href =\"product.html\">
+                                        <img id=\"polecanePic\" src=\"img/peperoni.jpg\">
+                                    </a>
+                                </td>
+                            </tr>";
+                    ?>                    
                    
 
             </article>
