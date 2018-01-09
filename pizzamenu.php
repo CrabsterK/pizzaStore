@@ -117,7 +117,11 @@
                         	}
                         	$licz++;;
                             echo "<tr >
-                            		<td style=\"border-bottom: 1px solid black\"><a href \"product.html\">" . $row["Nazwa"] . "</a>  </a></td>
+                            		<td style=\"border-bottom: 1px solid black\">
+                            			<a href =\"product.html\">
+                                       		".$row["Nazwa"]."
+                                   		</a>
+                            		</td>
 								    <td style=\"border-bottom: 1px solid black;\"><i>" . $row["skladTowaru"] . "</i></td>
 								    <td style=\"border-bottom: 1px solid black; width:120px\">" . $row["Cena"]  . "</td> 
 								    <td style=\"border-bottom: 1px solid black; width:120px\">" . $row["Cena"]  . "</td>
