@@ -28,7 +28,7 @@
         <a href ="track.html">
             <img id="track" alt="logo" src="img/track.png">
         </a>
-        <a href ="user.html">
+        <a href ="user.php">
             <img id="user" alt="logo" src="img/user.png">
         </a>
         <a href ="search.html">

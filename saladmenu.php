@@ -25,7 +25,7 @@
         <a href ="index.php">
             <img id="logo" alt="logo" src="img/pizza.png">
         </a>
-        <a href ="track.html">
+        <a href ="track.php">
             <img id="track" alt="logo" src="img/track.png">
         </a>
         <a href ="user.html">
