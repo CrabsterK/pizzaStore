@@ -12,7 +12,7 @@
     
     <body>
 
-        <a href ="index.html">
+        <a href ="index.php">
             <img id="logo" alt="logo" src="img/pizza.png">
         </a>
         <a href ="track.html">
