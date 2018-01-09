@@ -73,7 +73,7 @@
                                    		</a>
                             		</td>
 								    <td style=\"border-bottom: 1px solid black;\"><i>" . $row["skladTowaru"] . "</i></td>
-								    <td style=\"border-bottom: 1px solid black; width:120px\">" . $row["Cena"]  . "zł</td> 
+								    <td style=\"border-bottom: 1px solid black; width:120px\">" . $row["Cena"]  . " zł</td> 
 								</tr>";
                         }
                     }

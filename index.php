@@ -38,7 +38,8 @@
             <h2>Polecane</h2>
             
             <article style="height: 700px; ">
-                 <br><br><br><br><br>
+                 <h4>Promocja! Wszystkie rozmiary pizzy w tej samej cenie!</h4>
+                 <br>
 
 
                    <?php
