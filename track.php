@@ -1,3 +1,12 @@
+<?PHP
+    require 'DB/connection.php';
+
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
     <head>
@@ -38,30 +47,30 @@
                 <div>
                   <?php
                   $_SESSION['sum'] = 0;
-                    $sql = "SELECT * FROM zamprod WHERE Zamowienie = " . $_SESSION['order'] ;
+                    $sql = "SELECT * FROM IloscZamowionych" ;
                     $result = mysqli_query($link, $sql);
                     if(mysqli_num_rows($result) > 0){
                       echo "<table style=\"width: 60%\">";
                       echo "<tr>";
                       echo "<td>Produkt</td>";
-                      echo "<td>Cena</td>";
                       echo "<td>Ilość</td>";
-                      echo "<td>Suma</td>";
+                      echo "<td>Cena</td>";
                       echo "</tr>";
+
                       while ($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
-                        $sql = "SELECT * FROM produkt WHERE idProduktu =" . $row['Produkt'];
+                        $sql = "SELECT * FROM towara WHERE IdTowar =" . $row['TowaraIdTowar'];
                         if($info = mysqli_query($link, $sql)){
                           if (mysqli_num_rows($info) > 0) {
                             while($info_row = mysqli_fetch_assoc($info)){
                               echo "<td  >" . $info_row['Nazwa'] . "</td>";
                               echo "<td  style=\"border-bottom:1pt solid black;\">" . $info_row['Cena'] . "zł</td>";
-                              echo "<td  style=\"border-bottom:1pt solid black;\">" . $row['Ilosc'] . "</td>";
-                              echo "<td  style=\"border-bottom:1pt solid black;\">" . $info_row['Cena'] * $row['Ilosc'] . "zł</td>";
+                              echo "<td  style=\"border-bottom:1pt solid black;\">" . $row['IloscZamowionych'] . "</td>";
+                              echo "<td  style=\"border-bottom:1pt solid black;\">" . $info_row['Cena'] * $row['IloscZamowionych'] . "zł</td>";
                               $_SESSION['sum'] = $_SESSION['sum'] + $info_row['Cena'] * $row['Ilosc'];
                               echo "<td  style=\"border-bottom:1pt solid black;\">
                                 <form action=\"delete.php\" method=\"POST\">
-                                  Ilość: <input type=\"number\" name=\"quantity\" min=\"1\" max=\"" . $row['Ilosc'] . "\" value=\"1\" style=\"width:3em\">
+                                  Ilość: <input type=\"number\" name=\"quantity\" min=\"1\" max=\"" . $row['IloscZamowionych'] . "\" value=\"1\" style=\"width:3em\">
                                   <input type=\"hidden\" name=\"product\" value=\"" . $row['Produkt'] ."\" >
                                   <input type=\"hidden\" name=\"order\" value=\"" . $_SESSION['order'] ."\">
                                   <input type=\"submit\" value=\"Usuń z koszyka\" class=\"btn\">
@@ -79,7 +88,7 @@
                       echo "Koszyk jest pusty!";
                     }
                   ?>
-                  <a href="order.php"><p style="text-align: left">Kontunuj zakupy</p><a>
+                  <a href="menu.php"><p style="text-align: left">Kontunuj zakupy</p><a>
 
                     <?php
                       if ($_SESSION['sum'] != 0) {
