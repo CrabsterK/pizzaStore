@@ -179,7 +179,8 @@
                           <tr>
                             <td>UŻYJ</td>
                             <td></td>
-                          </tr>";
+                          </tr>
+                          </table>";
                        
                 ?> 
 
@@ -197,7 +198,7 @@
 
                     <?php
                       if ($_SESSION['sum'] != 0) {
-                        echo "<a href=\"finalize.php\"><p style=\"text-align: right\">Złóż zamówienie!</p><a>";
+                        echo "<a href=\"trackfinalize.php\"><p style=\"text-align: right\">Złóż zamówienie!</p><a>";
                       }
                     ?>
                 </div>
