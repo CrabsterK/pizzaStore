@@ -1,9 +1,14 @@
 <?PHP
     require 'DB/connection.php';
+    
+    $sql = "SELECT Miasto, Ulica, NrMieszkania FROM Adres" ;
+    $result = mysqli_query($link, $sql);
+    $row=mysqli_fetch_row($result);
 
 
-
-
+    $city = $row[0];
+    $street = $row[1];
+    $number = $row[2];
 
 ?>
 
@@ -76,7 +81,7 @@
                                 <form action=\"delete.php\" method=\"POST\">
                                   <input type=\"number\" name=\"quantity\" min=\"1\" max=\"" . $row['IloscZamowionych'] . "\" value=" .$row['IloscZamowionych']." style=\"width:3em\">
                                   <input type=\"submit\" value=\"Usuń\" class=\"btn\">
-                                  <input type=\"upd\" value=\"Aktualizuj\" class=\"btn\">
+                                  <input type=\"update\" value=\"Aktualizuj\" class=\"btn\">
                                 </form>
                               </td>";
                               echo "</tr>";
@@ -100,15 +105,15 @@
 
                             <tr>
                               <td>Wybierz sposób dostawy/odbioru</td>
-                              <td>Wybierz sposób płatności/odbioru</td>
+                              <td>Wybierz sposób płatności</td>
                             </tr>
 
                             <tr>
                               <td>
-                                  <input name=\"dostawa\" type=\"radio\" value=\"dostawca\">Dostawca<br>
+                                  <input name=\"dostawa\" type=\"radio\" value=\"dostawca\">Dostawca 8zł<br>
                                </td>
                               <td>
-                                  <input name=\"platnosc\" type=\"radio\" value=\"dostawca\">Karta płatnicza<br>
+                                  <input name=\"platnosc\" type=\"radio\" value=\"karta\">Karta płatnicza<br>
                                 </td>
                                 <td></td>
                             </tr>
@@ -118,7 +123,7 @@
                                   <input name=\"dostawa\" type=\"radio\" value=\"osobisty\" checked=\"checked\">Odbiór osobisty<br>
                                 </td>
                               <td>
-                                  <input name=\"platnosc\" type=\"radio\" value=\"osobisty\" checked=\"checked\">Przelew<br>
+                                  <input name=\"platnosc\" type=\"radio\" value=\"przelew\" checked=\"checked\">Przelew<br>
                                 </td>
                             </tr>
 
@@ -126,7 +131,7 @@
                               <tr>
                               <td></td>
                               <td>
-                                  <input name=\"platnosc\" type=\"radio\" value=\"osobisty\" checked=\"checked\">Płatność przy odbiorze<br>
+                                  <input name=\"platnosc\" type=\"radio\" value=\"przyodbiorze\" checked=\"checked\">Płatność przy odbiorze<br>
                                 </td>
                             </tr>
                           </table>";
@@ -143,14 +148,14 @@
                            echo "<table style=\"width:80%; text-align: left;\" >
                            <br>
                            <tr>
-                            Adres:
+                            <td>Adres:</td>
                             <br>
                            </tr>
 
                            <tr>
                             <td style=\"width:120px\">Miasto</td>
                             <td>
-                              <input name=\"miasto\" style=\"width: 20%;\"  id=\"miasto\" class=\"normalInput\" type=\"text\">
+                              <input name=\"miasto\" style=\"width: 20%;\"  id=\"miasto\" class=\"normalInput\" type=\"text\" value=$city>
                               <p class=\"hint\" id=\"cityRequest\"></p>
                             </td>
                           </tr>
@@ -158,7 +163,7 @@
                            <tr>
                             <td style=\"width:12px\">Ulica</td>
                             <td>
-                              <input name=\"ulica\" style=\"width: 20%;\"  id=\"ulica\" class=\"normalInput\" type=\"text\">
+                              <input name=\"ulica\" style=\"width: 20%;\"  id=\"ulica\" class=\"normalInput\" type=\"text\" value=$street>
                               <p class=\"hint\" id=\"streetRequest\"></p>
                             </td>
                           </tr>
@@ -166,14 +171,17 @@
                           <tr>
                             <td style=\"width:120px\">Nr mieszkania</td>
                             <td>
-                              <input name=\"numer\" style=\"width: 20%;\"  id=\"numer\" class=\"normalInput\" type=\"text\">
+                              <input name=\"numer\" style=\"width: 20%;\"  id=\"numer\" class=\"normalInput\" type=\"text\" value=$number>
                               <p class=\"hint\" id=\"numberRequest\"></p>
                             </td>
+                          </tr
+
+                          <tr>
+                            <td>UŻYJ</td>
+                            <td></td>
                           </tr>";
                        
                 ?> 
-
-
 
 
 
