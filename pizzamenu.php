@@ -25,7 +25,7 @@
         <a href ="index.php">
             <img id="logo" alt="logo" src="img/pizza.png">
         </a>
-        <a href ="track.html">
+        <a href ="track.php">
             <img id="track" alt="logo" src="img/track.png">
         </a>
         <a href ="user.php">
@@ -51,7 +51,7 @@
 
            	   <?php
 
-                    $sql = "SELECT Nazwa, skladTowaru, Cena FROM towara WHERE Kategoria = 'Pizza'";
+                    $sql = "SELECT Nazwa, skladTowaru, Cena, idTowar FROM towara WHERE Kategoria = 'Pizza'";
                     $result = mysqli_query($link, $sql);
                     $licz =0;
                     if(mysqli_num_rows($result) > 0){
@@ -59,9 +59,8 @@
                            <tr>
 							    <td style=\"border-bottom: 1px solid black\"></td>
 							    <td style=\"border-bottom: 1px solid black\">Skład pizzy</td>
-							    <td style=\"border-bottom: 1px solid black; width:120px\">20cm</td> 
-							    <td style=\"border-bottom: 1px solid black; width:120px\">30cm</td>
-							    <td style=\"border-bottom: 1px solid black; width:120px\">60cm (OSTROŻNIE!!)</td>
+							    <td style=\"border-bottom: 1px solid black; width:300px\">Cena</td> 
+                                <td style=\"border-bottom: 1px solid black; width:300px\">Zamów</td>
 						  	</tr>";
                         while($row = mysqli_fetch_assoc($result)){
                         	if($licz == 2){
@@ -75,9 +74,14 @@
                                    		</a>
                             		</td>
 								    <td style=\"border-bottom: 1px solid black;\"><i>" . $row["skladTowaru"] . "</i></td>
-								    <td style=\"border-bottom: 1px solid black; width:120px\">" . $row["Cena"]  . " zł</td> 
-								    <td style=\"border-bottom: 1px solid black; width:120px\">" . $row["Cena"]  . " zł</td>
-								    <td style=\"border-bottom: 1px solid black; width:120px\">" . $row["Cena"]  . " zł</td>
+								    <td style=\"border-bottom: 1px solid black; width:300px\">" . $row["Cena"]  . " zł</td> 
+                                    <td style=\"border-bottom:1pt solid black;\">
+                                      <form action=\"add.php\" method=\"POST\">
+                                        Ilość: <input type=\"number\" name=\"quantity\" min=\"1\" max=\"'10'\" value=\"1\" style=\"width:3em\">
+                                        <input type=\"hidden\" name=\"product\" value=\"" . $row['idTowar'] ."\" >
+                                        <input type=\"submit\" value=\"Dodaj\" class=\"btn\">
+                                      </form>
+                                    </td>
 								</tr>";
                         }
                     }

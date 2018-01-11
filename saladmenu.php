@@ -51,7 +51,7 @@
 
                 <?php
 
-                    $sql = "SELECT Nazwa, skladTowaru, Cena FROM towara WHERE Kategoria = 'Salatka'";
+                    $sql = "SELECT Nazwa, skladTowaru, Cena, idTowar FROM towara WHERE Kategoria = 'Salatka'";
                     $result = mysqli_query($link, $sql);
                     $licz =0;
                     if(mysqli_num_rows($result) > 0){
@@ -60,6 +60,7 @@
 							    <td style=\"border-bottom: 1px solid black; width:200px\"></td>
 							    <td style=\"border-bottom: 1px solid black\">Skład sałatki</td>
 							    <td style=\"border-bottom: 1px solid black; width:120px\">Cena</td> 
+                                <td style=\"border-bottom: 1px solid black; width:300px\">Zamów</td>
 						  	</tr>";
                         while($row = mysqli_fetch_assoc($result)){
                         	if($licz == 2){
@@ -74,6 +75,13 @@
                             		</td>
 								    <td style=\"border-bottom: 1px solid black;\"><i>" . $row["skladTowaru"] . "</i></td>
 								    <td style=\"border-bottom: 1px solid black; width:120px\">" . $row["Cena"]  . " zł</td> 
+                                    <td style=\"border-bottom:1pt solid black;\">
+                                      <form action=\"add.php\" method=\"POST\">
+                                        Ilość: <input type=\"number\" name=\"quantity\" min=\"1\" max=\"'10'\" value=\"1\" style=\"width:3em\">
+                                        <input type=\"hidden\" name=\"product\" value=\"" . $row['idTowar'] ."\" >
+                                        <input type=\"submit\" value=\"Dodaj\" class=\"btn\">
+                                      </form>
+                                    </td>
 								</tr>";
                         }
                     }

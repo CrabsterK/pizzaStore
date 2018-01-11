@@ -1,14 +1,17 @@
 <?PHP
     require 'DB/connection.php';
     
-    $sql = "SELECT Miasto, Ulica, NrMieszkania FROM Adres" ;
-    $result = mysqli_query($link, $sql);
-    $row=mysqli_fetch_row($result);
+
+     $sql = "UPDATE zamowienie SET stat='zlozone' WHERE stat='nowe'" ;
+    if(mysqli_query($link, $sql)){
+              echo "Birth date updated successfully.<br>";
+          } 
+    else {
+        echo "ERROR: Could not able to execute birth date update $sql. <br>" . mysqli_error($link);
+    }
 
 
-    $city = $row[0];
-    $street = $row[1];
-    $number = $row[2];
+
 
 ?>
 
@@ -100,6 +103,21 @@
 
 
                       #TODO: USUWANIE PRODUKTU
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     }else{
                       echo "Koszyk jest pusty!";
                     }

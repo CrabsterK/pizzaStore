@@ -1,0 +1,15 @@
+<?php 
+
+    function addTowar($idTowar, $idIlosc) { 
+    	require 'DB/connection.php';
+        $sql = "SELECT IdZamowienie FROM Zamowienie WHERE stat = \"nowe\"" ;
+        $result = mysqli_query($link, $sql);
+        $ro=mysqli_fetch_row($result);
+        $IdZamowienie = $ro[0];
+
+
+        $sql = "INSERT INTO IloscZamowionych (IloscZamowionych, ZamowienieIdZamowienie, TowarIdTowar) VALUES ($idIlosc, $IdZamowienie, $idTowar)";
+        mysqli_query($link, $sql);
+    } 
+
+  }

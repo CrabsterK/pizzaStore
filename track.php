@@ -1,6 +1,8 @@
 <?PHP
     require 'DB/connection.php';
-    
+    include 'kontrolerZamowienie.php';
+    include 'kontrolerIloscZamowionych.php';
+
     $sql = "SELECT Miasto, Ulica, NrMieszkania FROM Adres" ;
     $result = mysqli_query($link, $sql);
     $row=mysqli_fetch_row($result);
@@ -9,6 +11,10 @@
     $city = $row[0];
     $street = $row[1];
     $number = $row[2];
+
+    addTowar(10, 5);
+    
+   
 
 ?>
 
@@ -52,55 +58,61 @@
                 <div>
                   <?php
                   $_SESSION['sum'] = 0;
-                    $sql = "SELECT * FROM IloscZamowionych" ;
+                   $sql = "SELECT IdZamowienie FROM Zamowienie WHERE stat = \"nowe\"" ;
                     $result = mysqli_query($link, $sql);
                     if(mysqli_num_rows($result) > 0){
-                      echo "<table style=\"width: 80%;  text-align: left\">";
-                        echo "<tr>";
-                        echo "<td style=\"border-bottom:1pt solid black;\">Produkt</td>";
-                        echo "<td style=\"border-bottom:1pt solid black;\">Sztuka</td>";
-                        echo "<td style=\"border-bottom:1pt solid black;\">Cena</td>";
-                        echo "<td style=\"border-bottom:1pt solid black;\">Ilość</td>";
-                        echo "</tr>";
+                      $ro=mysqli_fetch_row($result);
+                      
 
-                      while ($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr>";
-                        $sql = "SELECT * FROM towara WHERE IdTowar =" . $row['TowaraIdTowar'];
-                        if($info = mysqli_query($link, $sql)){
-                          if (mysqli_num_rows($info) > 0) {
-                            while($info_row = mysqli_fetch_assoc($info)){
-                              echo "<td  style=\"border-bottom:1pt solid black;\">" . $info_row['Nazwa'] . "</td>";
-                              echo "<td  style=\"border-bottom:1pt solid black;\">" . $info_row['Cena'] . " zł</td>";
-                              echo "<td  style=\"border-bottom:1pt solid black;\">" . $info_row['Cena'] * $row['IloscZamowionych'] . " zł</td>";
-                            
+                      $sql = "SELECT * FROM IloscZamowionych WHERE ZamowienieIdZamowienie = $ro[0]" ;
+                      $result = mysqli_query($link, $sql);
+                      if(mysqli_num_rows($result) > 0){
+                        echo "<table style=\"width: 80%;  text-align: left\">";
+                          echo "<tr>";
+                          echo "<td style=\"border-bottom:1pt solid black;\">Produkt</td>";
+                          echo "<td style=\"border-bottom:1pt solid black;\">Sztuka</td>";
+                          echo "<td style=\"border-bottom:1pt solid black;\">Cena</td>";
+                          echo "<td style=\"border-bottom:1pt solid black;\">Ilość</td>";
+                          echo "</tr>";
+
+                        while ($row = mysqli_fetch_assoc($result)) {
+                          echo "<tr>";
+                          $sql = "SELECT * FROM towara WHERE IdTowar =" . $row['TowaraIdTowar'];
+                          if($info = mysqli_query($link, $sql)){
+                            if (mysqli_num_rows($info) > 0) {
+                              while($info_row = mysqli_fetch_assoc($info)){
+                                echo "<td  style=\"border-bottom:1pt solid black;\">" . $info_row['Nazwa'] . "</td>";
+                                echo "<td  style=\"border-bottom:1pt solid black;\">" . $info_row['Cena'] . " zł</td>";
+                                echo "<td  style=\"border-bottom:1pt solid black;\">" . $info_row['Cena'] * $row['IloscZamowionych'] . " zł</td>";
+                              
 
 
-                              $_SESSION['sum'] = $_SESSION['sum'] + $info_row['Cena'] * $row['IloscZamowionych'];
-                              echo 
-                              "<td  style=\"border-bottom:1pt solid black;\">
-                                <form action=\"delete.php\" method=\"POST\">
-                                  <input type=\"number\" name=\"quantity\" min=\"1\" max=\"" . $row['IloscZamowionych'] . "\" value=" .$row['IloscZamowionych']." style=\"width:3em\">
-                                  <input type=\"submit\" value=\"Usuń\" class=\"btn\">
-                                  <input type=\"update\" value=\"Aktualizuj\" class=\"btn\">
-                                </form>
-                              </td>";
-                              echo "</tr>";
+                                $_SESSION['sum'] = $_SESSION['sum'] + $info_row['Cena'] * $row['IloscZamowionych'];
+                                echo 
+                                "<td  style=\"border-bottom:1pt solid black;\">
+                                  <form action=\"delete.php\" method=\"POST\">
+                                    <input type=\"number\" name=\"quantity\" min=\"1\" max=\"" . $row['IloscZamowionych'] . "\" value=" .$row['IloscZamowionych']." style=\"width:3em\">
+                                    <input type=\"submit\" value=\"Usuń\" class=\"btn\">
+                                    <input type=\"update\" value=\"Aktualizuj\" class=\"btn\">
+                                  </form>
+                                </td>";
+                                echo "</tr>";
+                              }
                             }
                           }
                         }
-                      }
-                      echo "</table>";
-                      echo "<h3 style=\"text-align: center\">Wartość koszyka: " . $_SESSION['sum'] . "zł</h3>";
-                      #TODO: USUWANIE PRODUKTU
-                    }else{
-                      echo "Koszyk jest pusty!";
-                    }
-                  ?>
+                        echo "</table>";
+                        echo "<h3 style=\"text-align: center\">Wartość koszyka: " . $_SESSION['sum'] . "zł</h3>";
+                        #TODO: USUWANIE PRODUKTU
+                       
 
 
 
-                  <br><br><br>
-                   <?php
+
+
+
+                        echo "<br><br><br>";
+                 
                         echo "<table style=\"width:100%; text-align: left;\" >
 
                             <tr>
@@ -182,7 +194,18 @@
                           </tr>
                           </table>";
                        
-                ?> 
+            
+                        }else{
+                      echo "Koszyk jest pusty!";
+                    }
+                    }else{
+                      echo "Koszyk jest pusty!";
+                    }
+                  ?>
+
+
+
+                  
 
 
 
@@ -198,6 +221,7 @@
 
                     <?php
                       if ($_SESSION['sum'] != 0) {
+
                         echo "<a href=\"trackfinalize.php\"><p style=\"text-align: right\">Złóż zamówienie!</p><a>";
                       }
                     ?>

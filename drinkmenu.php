@@ -44,21 +44,21 @@
                                     <a href =\"product.html\">
                                         <img id=\"polecanePic\" src=\"img/cola.jpg\">
                                     </a>
-                                    <h5>PIZZA MIĘSNA</h5>
+                                    <h5>Cola 0,5l</h5>
                                 </td>
 
                                 <td>  
                                     <a href =\"product.html\">
                                         <img id=\"polecanePic\" src=\"img/orange.jpg\">
                                     </a>
-                                    <h5>PIZZA CAPRICIOSA</h5>
+                                    <h5>Sok pomarańczowy 0,5l</h5>
                                 </td>
 
                                 <td>  
                                     <a href =\"product.html\">
                                        <img id=\"polecanePic\" src=\"img/sprite.jpg\">
                                     </a>
-                                    <h5>PIZZA PEPERONI</h5>
+                                    <h5>Sprite 0,5l</h5>
                                 </td>
                             </tr>
 
@@ -69,21 +69,21 @@
                                     <a href =\"product.html\">
                                         <img id=\"polecanePic\" src=\"img/piwo.jpg\">
                                     </a>
-                                    <h5>PIZZA RIMINI</h5>
+                                    <h5>Piwo pszeniczne 0,5l</h5>
                                 </td>
 
                                 <td>  
                                     <a href =\"product.html\">
                                         <img id=\"polecanePic\" src=\"img/woda.jpg\">
                                     </a>
-                                    <h5>PIZZA BARBADOS</h5>
+                                    <h5>Woda niegazowana 0,5l</h5>
                                 </td>
 
                                 <td>  
                                     <a href =\"product.html\">
                                        <img id=\"polecanePic\" src=\"img/herbata.png\">
                                     </a>
-                                    <h5>PIZZA TEKSAŃSKI KURCZAK</h5>
+                                    <h5>Herbata czarna 250mlK</h5>
                                 </td>
                             </tr>";
 
