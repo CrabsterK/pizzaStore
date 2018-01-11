@@ -1,7 +1,7 @@
 <?php 
 
     //dodaje towar do NOWEGO zamówienia. Jeśli takiego nie znajdzie, to tworzy nowe zamówienie i dopiero dodaje do niego towar
-    function addTowar($idTowar, $ilosc) {//nie sprawdza czy produkt jest już w koszyku //JAK COŚ SIĘ NIE BĘDZIE ZGADZAŁO< TO TAK TEZ DZIAŁAJĄ KASY W SKLEPACH.
+    function addTowar($idTowar, $ilosc) {//Sprawdza czy produkt jest już w koszyku i jeśli tak to dodaje ilość
         echo 'exxxxxx';
     	require 'DB/connection.php';
         $sql = "SELECT IdZamowienie FROM Zamowienie WHERE stat = \"nowe\"" ;
@@ -11,7 +11,7 @@
             $ro=mysqli_fetch_row($result);
             $IdZamowienie = $ro[0];
 
-            $sqlBYLO = "SELECT (IloscZamowionych, ZamowienieIdZamowienie, TowaraIdTowar) FROM IloscZamowionych WHERE (ZamowienieIdZamowienie = $IdZamowienie AND TowaraIdTowar = $idTowar)";
+            $sqlBYLO = "SELECT IloscZamowionych, ZamowienieIdZamowienie, TowaraIdTowar FROM IloscZamowionych WHERE (ZamowienieIdZamowienie = $IdZamowienie AND TowaraIdTowar = $idTowar)";
             $resultBYLO = mysqli_query($link, $sqlBYLO);
             $roBYLO=mysqli_fetch_row($resultBYLO);
             if(mysqli_num_rows($resultBYLO) > 0){//jeśli już jest taki towar w zamówieniu
@@ -46,7 +46,7 @@
         }
         
 
-        function updateTowar($idTowar, $ilosc) { //Zmienia wszystkie wystąpienia
+        function updateTowar($idTowar, $ilosc) { //Zmienia wszystkie wystąpienia. Ustawia ilość na podaną. Jeśli ilość =0, to usuwa towar.
             if($ilosc < 1){
                 deleteTowar($idTowar);
             }
