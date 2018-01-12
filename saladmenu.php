@@ -79,6 +79,7 @@
                                       <form action=\"add.php\" method=\"POST\">
                                         Ilość: <input type=\"number\" name=\"quantity\" min=\"1\" max=\"'10'\" value=\"1\" style=\"width:3em\">
                                         <input type=\"hidden\" name=\"product\" value=\"" . $row['idTowar'] ."\" >
+                                         <input type=\"hidden\" name=\"backTo\" value=\"saladmenu.php\" >
                                         <input type=\"submit\" value=\"Dodaj\" class=\"btn\">
                                       </form>
                                     </td>

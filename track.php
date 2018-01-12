@@ -1,7 +1,6 @@
 <?PHP
     require 'DB/connection.php';
-    include 'kontrolerZamowienie.php';
-    include 'kontrolerIloscZamowionych.php';
+    include 'kontroler/IloscZamowionych.php';
 
     $sql = "SELECT Miasto, Ulica, NrMieszkania FROM Adres" ;
     $result = mysqli_query($link, $sql);
@@ -12,8 +11,9 @@
     $street = $row[1];
     $number = $row[2];
 
-    addTowar(10, 5);
-    
+
+    $IloscZamowionych = new IloscZamowionych();
+    $IloscZamowionych->deleteTowar(20, 5);
    
 
 ?>

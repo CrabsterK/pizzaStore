@@ -1,6 +1,6 @@
 <?PHP
     require 'DB/connection.php';
-
+    include 'kontroler/IloscZamowionych.php';
 
 
 
@@ -67,6 +67,7 @@
                         		echo"<h4>KLASYCZNE</h4>";  
                         	}
                         	$licz++;;
+                           // echo $row['idTowar'];
                             echo "<tr >
                             		<td style=\"border-bottom: 1px solid black\">
                             			<a href =\"product.html\">
@@ -79,7 +80,8 @@
                                       <form action=\"add.php\" method=\"POST\">
                                         Ilość: <input type=\"number\" name=\"quantity\" min=\"1\" max=\"'10'\" value=\"1\" style=\"width:3em\">
                                         <input type=\"hidden\" name=\"product\" value=\"" . $row['idTowar'] ."\" >
-                                        <input type=\"submit\" value=\"Dodaj\" class=\"btn\">
+                                        <input type=\"hidden\" name=\"backTo\" value=\"pizzamenu.php\" >
+                                        <input type=\"submit\" value=\"Dodaj\" class=\"btn\" >
                                       </form>
                                     </td>
 								</tr>";
