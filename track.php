@@ -2,6 +2,7 @@
     require 'DB/connection.php';
     include 'kontroler/IloscZamowionych.php';
 
+
     $sql = "SELECT Miasto, Ulica, NrMieszkania FROM Adres" ;
     $result = mysqli_query($link, $sql);
     $row=mysqli_fetch_row($result);
@@ -11,9 +12,6 @@
     $street = $row[1];
     $number = $row[2];
 
-
-    $IloscZamowionych = new IloscZamowionych();
-    $IloscZamowionych->deleteTowar(20, 5);
    
 
 ?>
@@ -164,7 +162,7 @@
 
 
 
-                          
+                          //ADRES
 
                            echo "<table style=\"width:80%; text-align: left;\" >
                            <br>
@@ -172,35 +170,39 @@
                             <td>Adres:</td>
                             <br>
                            </tr>
+                           <form action=\"updateAdres.php\" method=\"POST\">
+                                   <tr>
+                                    <td style=\"width:120px\">Miasto</td>
+                                    <td>
+                                      <input name=\"miasto\" style=\"width: 20%;\"type=\"text\" value=$city>
+                                      <p class=\"hint\" id=\"cityRequest\"></p>
+                                    </td>
+                                  </tr>
 
-                           <tr>
-                            <td style=\"width:120px\">Miasto</td>
-                            <td>
-                              <input name=\"miasto\" style=\"width: 20%;\"  id=\"miasto\" class=\"normalInput\" type=\"text\" value=$city>
-                              <p class=\"hint\" id=\"cityRequest\"></p>
-                            </td>
-                          </tr>
+                                   <tr>
+                                    <td style=\"width:12px\">Ulica</td>
+                                    <td>
+                                      <input name=\"ulica\" style=\"width: 20%;\"type=\"text\" value=$street>
+                                      <p class=\"hint\" id=\"streetRequest\"></p>
+                                    </td>
+                                  </tr>
 
-                           <tr>
-                            <td style=\"width:12px\">Ulica</td>
-                            <td>
-                              <input name=\"ulica\" style=\"width: 20%;\"  id=\"ulica\" class=\"normalInput\" type=\"text\" value=$street>
-                              <p class=\"hint\" id=\"streetRequest\"></p>
-                            </td>
-                          </tr>
+                                  <tr>
+                                    <td style=\"width:120px\">Nr mieszkania</td>
+                                    <td>
+                                      <input name=\"numer\" style=\"width: 20%;\"type=\"text\" value=$number>
+                                      <p class=\"hint\" id=\"numberRequest\"></p>
+                                    </td>
+                                  </tr
 
-                          <tr>
-                            <td style=\"width:120px\">Nr mieszkania</td>
-                            <td>
-                              <input name=\"numer\" style=\"width: 20%;\"  id=\"numer\" class=\"normalInput\" type=\"text\" value=$number>
-                              <p class=\"hint\" id=\"numberRequest\"></p>
-                            </td>
-                          </tr
+                                  <tr>
 
-                          <tr>
-                            <td>UŻYJ</td>
-                            <td></td>
-                          </tr>
+                                    <td> 
+                                    <input type=\"hidden\" name=\"backTo\" value=\"track.php\" >
+                                    <input type=\"submit\" value=\"Aktualizuj\" class=\"btn\"></td>
+                                    <td></td>
+                                  </tr>
+                          </form>
                           </table>";
                        
             

@@ -53,7 +53,7 @@ class Zamowienie {
 
 	 function addNewZamowienie() { 
     	 require 'DB/connection.php';
-         $sql = "INSERT INTO Zamowienie (stat, KlientIdKlient) VALUES ('nowe', '1')";
+         $sql = "INSERT INTO Zamowienie (adresDostawy, stat, KlientIdKlient) VALUES ('1', 'nowe', '1')";
          mysqli_query($link, $sql);
     } 
 

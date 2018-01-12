@@ -8,6 +8,6 @@
     $IloscZamowionych->deleteTowar($_POST['product']);
 
     $backTo = $_POST['backTo'];
-  header("Location: $backTo");
+    header("Location: $backTo");
 
 ?>
