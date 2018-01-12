@@ -67,7 +67,7 @@
                       $sql = "SELECT * FROM IloscZamowionych WHERE ZamowienieIdZamowienie = $ro[0]" ;
                       $result = mysqli_query($link, $sql);
                       if(mysqli_num_rows($result) > 0){
-                        echo "<table style=\"width: 80%;  text-align: left\">";
+                        echo "<table style=\"width: 90%;  text-align: left\">";
                           echo "<tr>";
                           echo "<td style=\"border-bottom:1pt solid black;\">Produkt</td>";
                           echo "<td style=\"border-bottom:1pt solid black;\">Sztuka</td>";
@@ -90,11 +90,20 @@
                                 $_SESSION['sum'] = $_SESSION['sum'] + $info_row['Cena'] * $row['IloscZamowionych'];
                                 echo 
                                 "<td  style=\"border-bottom:1pt solid black;\">
+                                  <form action=\"update.php\" method=\"POST\" style=\"float: left\">
+                                      <input type=\"number\" name=\"quantity\" min=\"1\" max=\"100\"" . $row['IloscZamowionych'] . "\" value=" .$row['IloscZamowionych']." style=\"width:3em\">
+                                       <input type=\"hidden\" name=\"product\" value=\"" . $info_row['IdTowar'] ."\" >
+                                       <input type=\"hidden\" name=\"backTo\" value=\"track.php\" >
+                                      <input type=\"submit\" value=\"Zapisz\" class=\"btn\">
+                                    </form>
+
                                   <form action=\"delete.php\" method=\"POST\">
-                                    <input type=\"number\" name=\"quantity\" min=\"1\" max=\"" . $row['IloscZamowionych'] . "\" value=" .$row['IloscZamowionych']." style=\"width:3em\">
+                                    <input type=\"hidden\" name=\"quantity\" min=\"1\" max=\"100\"" . $row['IloscZamowionych'] . "\" value=" .$row['IloscZamowionych']." style=\"width:3em\">
+                                     <input type=\"hidden\" name=\"product\" value=\"" . $info_row['IdTowar'] ."\" >
+                                     <input type=\"hidden\" name=\"backTo\" value=\"track.php\" >
                                     <input type=\"submit\" value=\"Usuń\" class=\"btn\">
-                                    <input type=\"update\" value=\"Aktualizuj\" class=\"btn\">
                                   </form>
+                                   
                                 </td>";
                                 echo "</tr>";
                               }
@@ -201,6 +210,7 @@
                     }else{
                       echo "Koszyk jest pusty!";
                     }
+
                   ?>
 
 

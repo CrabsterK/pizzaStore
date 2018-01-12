@@ -81,7 +81,8 @@
                                         Ilość: <input type=\"number\" name=\"quantity\" min=\"1\" max=\"'10'\" value=\"1\" style=\"width:3em\">
                                         <input type=\"hidden\" name=\"product\" value=\"" . $row['idTowar'] ."\" >
                                         <input type=\"hidden\" name=\"backTo\" value=\"pizzamenu.php\" >
-                                        <input type=\"submit\" value=\"Dodaj\" class=\"btn\" >
+                                        <input type=\"submit\" value=\"Dodaj\" name=\"add\" class=\"btn\">
+
                                       </form>
                                     </td>
 								</tr>";
@@ -89,6 +90,7 @@
                     }
                     echo "</table>";
                 ?> 
+<input type="button" style="background:url(http://cdn.sstatic.net/stackexchange/img/favicon.ico);" onclick="alert('clicked')"/>
 
 
             </article>

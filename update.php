@@ -5,7 +5,7 @@
 
 
     $IloscZamowionych = new IloscZamowionych();
-    $IloscZamowionych->deleteTowar($_POST['product']);
+    $IloscZamowionych->updateTowar($_POST['product'], $_POST['quantity']);
 
     $backTo = $_POST['backTo'];
   header("Location: $backTo");
