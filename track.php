@@ -190,7 +190,7 @@
                                       <input name=\"ulica\" style=\"width: 45%;\"type=\"text\" value=$street>
                                       <p class=\"hint\" id=\"streetRequest\"></p>
                                     </td>
-                                    <td style=\"border-bottom:1pt solid black;\">Transport:</td>
+                                    <td style=\"border-bottom:1pt solid black;\">Dostawa:</td>
                                     <td style=\"border-bottom:1pt solid black; text-align: right\">DARMOWA!</td>
                                   </tr>
 
