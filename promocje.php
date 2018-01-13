@@ -48,7 +48,7 @@
                                     <a href =\"#\">
                                         <img id=\"polecanePic\" src=\"img/greek.jpg\">
                                     </a>
-                                    <form action=\"add.php\" method=\"POST\">
+                                    <form action=\"IloscZamowionychAdd.php\" method=\"POST\">
                                         <input type=\"hidden\" name=\"product\" value= \"1\" >
                                         <input type=\"hidden\" name=\"quantity\" value=\"1\" >
                                         <input type=\"hidden\" name=\"backTo\" value=\"promocje.php\" >
@@ -62,7 +62,7 @@
                                     <a href =\"#\">
                                         <img id=\"polecanePic\" src=\"img/hawai.jpg\">
                                     </a>
-                                     <form action=\"add.php\" method=\"POST\">
+                                     <form action=\"IloscZamowionychAdd.php\" method=\"POST\">
                                         <input type=\"hidden\" name=\"product\" value= \"11\" >
                                         <input type=\"hidden\" name=\"quantity\" value=\"1\" >
                                         <input type=\"hidden\" name=\"backTo\" value=\"promocje.php\" >
@@ -76,7 +76,7 @@
                                     <a href =\"#\">
                                         <img id=\"polecanePic\" src=\"img/peperoni.jpg\">
                                     </a>
-                                     <form action=\"add.php\" method=\"POST\">
+                                     <form action=\"IloscZamowionychAdd.php\" method=\"POST\">
                                         <input type=\"hidden\" name=\"product\" value= \"10\" >
                                         <input type=\"hidden\" name=\"quantity\" value=\"1\" >
                                         <input type=\"hidden\" name=\"backTo\" value=\"promocje.php\" >

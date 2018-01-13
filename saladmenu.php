@@ -69,14 +69,14 @@
                         	$licz++;;
                             echo "<tr >
                             		<td style=\"border-bottom: 1px solid black; width:200px\">
-                            			<a href =\"product.html\">
+                            			<a href =\"#\">
                                        		".$row["Nazwa"]."
                                    		</a>
                             		</td>
 								    <td style=\"border-bottom: 1px solid black;\"><i>" . $row["skladTowaru"] . "</i></td>
 								    <td style=\"border-bottom: 1px solid black; width:120px\">" . $row["Cena"]  . " zł</td> 
                                     <td style=\"border-bottom:1pt solid black;\">
-                                      <form action=\"add.php\" method=\"POST\">
+                                      <form action=\"IloscZamowionychAdd.php\" method=\"POST\">
                                         Ilość: <input type=\"number\" name=\"quantity\" min=\"1\" max=\"'10'\" value=\"1\" style=\"width:3em\">
                                         <input type=\"hidden\" name=\"product\" value=\"" . $row['idTowar'] ."\" >
                                          <input type=\"hidden\" name=\"backTo\" value=\"saladmenu.php\" >

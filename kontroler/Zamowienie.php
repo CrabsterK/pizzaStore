@@ -1,6 +1,6 @@
 <?php
-require_once( 'kontroler/Klient.php');
-require_once( 'kontroler/IloscZamowionych.php');
+require_once( 'Klient.php');
+require_once( 'IloscZamowionych.php');
 
 /**
  * 1.      Domyœlnym adresem dostawy do klienta jest jego adres w systemie.  

@@ -88,14 +88,14 @@
                                 $_SESSION['fullSum'] = $_SESSION['sum'];
                                 echo 
                                 "<td  style=\"border-bottom:1pt solid black;\">
-                                  <form action=\"update.php\" method=\"POST\" style=\"float: left\">
+                                  <form action=\"IloscZamowionychUpdate.php\" method=\"POST\" style=\"float: left\">
                                       <input type=\"number\" name=\"quantity\" min=\"1\" max=\"100\"" . $row['IloscZamowionych'] . "\" value=" .$row['IloscZamowionych']." style=\"width:3em\">
                                        <input type=\"hidden\" name=\"product\" value=\"" . $info_row['IdTowar'] ."\" >
                                        <input type=\"hidden\" name=\"backTo\" value=\"track.php\" >
                                       <input type=\"submit\" value=\"Zapisz\" class=\"btn\">
                                     </form>
 
-                                  <form action=\"delete.php\" method=\"POST\">
+                                  <form action=\"IloscZamowionychDelete.php\" method=\"POST\">
                                     <input type=\"hidden\" name=\"quantity\" min=\"1\" max=\"100\"" . $row['IloscZamowionych'] . "\" value=" .$row['IloscZamowionych']." style=\"width:3em\">
                                      <input type=\"hidden\" name=\"product\" value=\"" . $info_row['IdTowar'] ."\" >
                                      <input type=\"hidden\" name=\"backTo\" value=\"track.php\" >
@@ -120,7 +120,7 @@
 
                         echo "<br><br><br>";
                  
-              echo "<form action=\"finishOrder.php\" method=\"POST\">
+              echo "<form action=\"ZamowienieFinish.php\" method=\"POST\">
                         <table style=\"width:100%; text-align: left;\" >
 
                             <tr>

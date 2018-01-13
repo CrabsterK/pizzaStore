@@ -1,5 +1,5 @@
 <?php
-require_once( 'kontroler/IloscZamowionych.php');
+require_once( 'IloscZamowionych.php');
 
 /**
  * @access public

@@ -42,7 +42,7 @@
                         "<table style=\"width:100%; text-align: center;\" >
                              <tr>
                                 <td>  
-                                    <form action=\"add.php\" method=\"POST\">
+                                    <form action=\"IloscZamowionychAdd.php\" method=\"POST\">
                                         <input type=\"hidden\" name=\"product\" value= \"16\" >
                                         <input type=\"hidden\" name=\"quantity\" value=\"1\" >
                                         <input type=\"hidden\" name=\"backTo\" value=\"drinkmenu.php\" >
@@ -54,7 +54,7 @@
                                 </td>
 
                                 <td>  
-                                    <form action=\"add.php\" method=\"POST\">
+                                    <form action=\"IloscZamowionychAdd.php\" method=\"POST\">
                                         <input type=\"hidden\" name=\"product\" value= \"17\" >
                                         <input type=\"hidden\" name=\"quantity\" value=\"1\" >
                                         <input type=\"hidden\" name=\"backTo\" value=\"drinkmenu.php\" >
@@ -66,7 +66,7 @@
                                 </td>
 
                                 <td>  
-                                    <form action=\"add.php\" method=\"POST\">
+                                    <form action=\"IloscZamowionychAdd.php\" method=\"POST\">
                                         <input type=\"hidden\" name=\"product\" value= \"20\" >
                                         <input type=\"hidden\" name=\"quantity\" value=\"1\" >
                                         <input type=\"hidden\" name=\"backTo\" value=\"drinkmenu.php\" >
@@ -82,7 +82,7 @@
 
                              <tr>
                                 <td>  
-                                    <form action=\"add.php\" method=\"POST\">
+                                    <form action=\"IloscZamowionychAdd.php\" method=\"POST\">
                                         <input type=\"hidden\" name=\"product\" value= \"18\" >
                                         <input type=\"hidden\" name=\"quantity\" value=\"1\" >
                                         <input type=\"hidden\" name=\"backTo\" value=\"drinkmenu.php\" >
@@ -94,7 +94,7 @@
                                 </td>
                                
                                 <td>  
-                                    <form action=\"add.php\" method=\"POST\">
+                                    <form action=\"IloscZamowionychAdd.php\" method=\"POST\">
                                         <input type=\"hidden\" name=\"product\" value= \"19\" >
                                         <input type=\"hidden\" name=\"quantity\" value=\"1\" >
                                         <input type=\"hidden\" name=\"backTo\" value=\"drinkmenu.php\" >
@@ -106,7 +106,7 @@
                                 </td>
 
                                 <td>  
-                                    <form action=\"add.php\" method=\"POST\">
+                                    <form action=\"IloscZamowionychAdd.php\" method=\"POST\">
                                         <input type=\"hidden\" name=\"product\" value= \"21\" >
                                         <input type=\"hidden\" name=\"quantity\" value=\"1\" >
                                         <input type=\"hidden\" name=\"backTo\" value=\"drinkmenu.php\" >

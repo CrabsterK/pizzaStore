@@ -64,7 +64,7 @@
                         echo "<td style=\"text-align:center; border-bottom:1pt solid black;\">" . $row['Opis'] . "</td>";
                         echo "<td style=\"text-align:center; border-bottom:1pt solid black;\">" . $row['Cena'] . " zł </td>";
                         echo "<td style=\"text-align:center; border-bottom:1pt solid black;\">
-                          <form action=\"add.php\" method=\"POST\">
+                          <form action=\"IloscZamowionychAdd.php\" method=\"POST\">
                             Ilość: <input type=\"number\" name=\"quantity\" min=\"1\" max=\"" . $row['Dostenosc'] . "\" value=\"1\" style=\"width:3em\">
                             <input type=\"hidden\" name=\"product\" value=\"" . $row['idProduktu'] ."\" >
                             <input type=\"hidden\" name=\"order\" value=\"" . $_SESSION['order'] ."\">

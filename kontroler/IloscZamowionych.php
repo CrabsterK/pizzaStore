@@ -1,6 +1,6 @@
 <?php
-require_once( 'kontroler/Zamowienie.php');
-require_once( 'kontroler/Towar.php');
+require_once( 'Zamowienie.php');
+require_once( 'Towar.php');
 
 /**
  * @access public

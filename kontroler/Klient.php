@@ -1,6 +1,6 @@
 <?php
-require_once('kontroler/Adres.php');
-require_once( 'kontroler/Zamowienie.php');
+require_once('Adres.php');
+require_once( 'Zamowienie.php');
 
 /**
  * 1.      Do wystawienia faktury niezbêdny jest NIP klienta.   
