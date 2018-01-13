@@ -8,6 +8,6 @@
     $IloscZamowionych->updateTowar($_POST['product'], $_POST['quantity']);
 
     $backTo = $_POST['backTo'];
-  header("Location: $backTo");
+  	header("Location: $backTo");
 
 ?>

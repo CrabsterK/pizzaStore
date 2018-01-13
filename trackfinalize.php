@@ -2,14 +2,8 @@
     require 'DB/connection.php';
     
 
-     $sql = "UPDATE zamowienie SET stat='zlozone' WHERE stat='nowe'" ;
-    if(mysqli_query($link, $sql)){
-              echo "Birth date updated successfully.<br>";
-          } 
-    else {
-        echo "ERROR: Could not able to execute birth date update $sql. <br>" . mysqli_error($link);
-    }
-
+   
+   
 
 
 

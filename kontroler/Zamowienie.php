@@ -59,30 +59,30 @@ class Zamowienie {
 
     function setKwotaZamowienia($kwota) { //zakłada ze jest już NOWE
     	require 'DB/connection.php';
-        $sql = "UPDATE Zamowienie SET Kwota=$kwota WHERE stat ='nowe'" ;
+        $sql = "UPDATE Zamowienie SET Kwota='$kwota' WHERE stat ='nowe'" ;
         mysqli_query($link, $sql);
     } 
     function setDataZlozeniaZamowienia($data) { //zakłada ze jest już NOWE
     	require 'DB/connection.php';
-        $sql = "UPDATE Zamowienie SET DataZlozenia=$data WHERE stat ='nowe'" ;
+        $sql = "UPDATE Zamowienie SET DataZlozenia='$data' WHERE stat ='nowe'" ;
         mysqli_query($link, $sql);
     } 
 
     function setDostawaZamowienia($dostawa) { //zakłada ze jest już NOWE
     	require 'DB/connection.php';
-        $sql = "UPDATE Zamowienie SET dostawa=$dostawa WHERE stat ='nowe'" ;
+        $sql = "UPDATE Zamowienie SET dostawa='$dostawa' WHERE stat ='nowe'" ;
         mysqli_query($link, $sql);
     }
 
     function setPlatnoscZamowienia($platnosc) { //zakłada ze jest już NOWE
     	require 'DB/connection.php';
-        $sql = "UPDATE Zamowienie SET platnosc=$platnosc WHERE stat ='nowe'" ;
+        $sql = "UPDATE Zamowienie SET platnosc='$platnosc' WHERE stat ='nowe'" ;
         mysqli_query($link, $sql);
     }
 
-     function setStatZamowienia($platnosc) { //zakłada ze jest już NOWE
+     function setStatZamowienia($stat) { //zakłada ze jest już NOWE
     	require 'DB/connection.php';
-        $sql = "UPDATE Zamowienie SET stat=$stat WHERE stat ='nowe'" ;
+        $sql = "UPDATE Zamowienie SET stat='$stat' WHERE stat ='nowe'" ;
         mysqli_query($link, $sql);
     }
 

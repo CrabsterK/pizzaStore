@@ -12,7 +12,6 @@
     $street = $row[1];
     $number = $row[2];
 
-   
 
 ?>
 
@@ -56,6 +55,7 @@
                 <div>
                   <?php
                   $_SESSION['sum'] = 0;
+                  $_SESSION['fullSum'] = 0;
                    $sql = "SELECT IdZamowienie FROM Zamowienie WHERE stat = \"nowe\"" ;
                     $result = mysqli_query($link, $sql);
                     if(mysqli_num_rows($result) > 0){
@@ -86,6 +86,7 @@
 
 
                                 $_SESSION['sum'] = $_SESSION['sum'] + $info_row['Cena'] * $row['IloscZamowionych'];
+                                $_SESSION['fullSum'] = $_SESSION['sum'] + 8;
                                 echo 
                                 "<td  style=\"border-bottom:1pt solid black;\">
                                   <form action=\"update.php\" method=\"POST\" style=\"float: left\">
@@ -120,7 +121,8 @@
 
                         echo "<br><br><br>";
                  
-                        echo "<table style=\"width:100%; text-align: left;\" >
+              echo "<form action=\"finishOrder.php\" method=\"POST\">
+                        <table style=\"width:100%; text-align: left;\" >
 
                             <tr>
                               <td>Wybierz sposób dostawy/odbioru</td>
@@ -129,7 +131,7 @@
 
                             <tr>
                               <td>
-                                  <input name=\"dostawa\" type=\"radio\" value=\"dostawca\">Dostawca 8zł<br>
+                                  <input name=\"dostawa\" type=\"radio\" value=\"dostawca\">Dostawca 8 zł<br>
                                </td>
                               <td>
                                   <input name=\"platnosc\" type=\"radio\" value=\"karta\">Karta płatnicza<br>
@@ -153,7 +155,7 @@
                                   <input name=\"platnosc\" type=\"radio\" value=\"przyodbiorze\" checked=\"checked\">Płatność przy odbiorze<br>
                                 </td>
                             </tr>
-                          </table>";
+                          </table>
 
 
 
@@ -162,48 +164,60 @@
 
 
 
-                          //ADRES
+                        
 
-                           echo "<table style=\"width:80%; text-align: left;\" >
+                           <table style=\"width:80%; text-align: left;\" >
                            <br>
-                           <tr>
-                            <td>Adres:</td>
-                            <br>
-                           </tr>
-                           <form action=\"updateAdres.php\" method=\"POST\">
+                                   <tr>
+                                    <td>Adres:</td>
+                                    <td></td>
+                                    <td>Podsumowanie:</td>
+                                    <br>
+                                   </tr>
+                           
                                    <tr>
                                     <td style=\"width:120px\">Miasto</td>
                                     <td>
-                                      <input name=\"miasto\" style=\"width: 20%;\"type=\"text\" value=$city>
+                                      <input name=\"miasto\" style=\"width: 45%;\"type=\"text\" value=$city>
                                       <p class=\"hint\" id=\"cityRequest\"></p>
                                     </td>
+                                    <td style=\"width: 28%\">Wartość produktów w koszyku:</td>
+                                    <td style=\"width: 8%; text-align: right\">" . $_SESSION['sum'] . " zł</td>
                                   </tr>
 
                                    <tr>
                                     <td style=\"width:12px\">Ulica</td>
                                     <td>
-                                      <input name=\"ulica\" style=\"width: 20%;\"type=\"text\" value=$street>
+                                      <input name=\"ulica\" style=\"width: 45%;\"type=\"text\" value=$street>
                                       <p class=\"hint\" id=\"streetRequest\"></p>
                                     </td>
+                                    <td style=\"border-bottom:1pt solid black;\">Transport:</td>
+                                    <td style=\"border-bottom:1pt solid black; text-align: right\">8 zł</td>
                                   </tr>
 
                                   <tr>
                                     <td style=\"width:120px\">Nr mieszkania</td>
                                     <td>
-                                      <input name=\"numer\" style=\"width: 20%;\"type=\"text\" value=$number>
+                                      <input name=\"numer\" style=\"width: 45%;\"type=\"text\" value=$number>
                                       <p class=\"hint\" id=\"numberRequest\"></p>
                                     </td>
+                                    <td style=\"border-bottom:1pt solid black;\">Całkowita kwota do zapłaty:</td>
+                                    <td style=\"border-bottom:1pt solid black;; text-align: right\">".  $_SESSION['fullSum'] . " zł</td>
                                   </tr
 
                                   <tr>
 
                                     <td> 
-                                    <input type=\"hidden\" name=\"backTo\" value=\"track.php\" >
-                                    <input type=\"submit\" value=\"Aktualizuj\" class=\"btn\"></td>
+                                    <input type=\"hidden\" name=\"backTo\" value=\"trackfinalize.php\" >
+                                   
                                     <td></td>
                                   </tr>
-                          </form>
-                          </table>";
+                          
+                          </table>
+                                <input type=\"hidden\" name=\"fullSum\" value=\"" . $_SESSION['fullSum'] ."\" >
+                              <input  style=\"float: right\" type=\"submit\" value=\"Złóż zamówienie!\" class=\"finishButton\"></td>
+                        
+                </form>";
                        
             
                         }else{
@@ -234,7 +248,7 @@
                     <?php
                       if ($_SESSION['sum'] != 0) {
 
-                        echo "<a href=\"trackfinalize.php\"><p style=\"text-align: right\">Złóż zamówienie!</p><a>";
+                     //   echo "<a href=\"trackfinalize.php\"><p style=\"text-align: right\">Złóż zamówienie!</p><a>";
                       }
                     ?>
                 </div>

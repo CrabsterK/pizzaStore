@@ -54,7 +54,8 @@ class IloscZamowionych {
 	            }
 	        }
 	        else{
-	            addNewZamowienie();
+	        	$Zamowienie = new Zamowienie();
+	            $Zamowienie->addNewZamowienie();
 	            //echo "<br>UTWORZYŁAM";
 	            $this->addTowar($idTowar, $ilosc);
 	        }
