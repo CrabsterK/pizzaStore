@@ -1,0 +1,21 @@
+{
+    "name": "arkadiusz/pizza",
+    "authors": [
+        {
+            "name": "CrabsterK",
+            "email": "arek.marcinowski18@gmail.com"
+        }
+    ],
+    "minimum-stability": "alpha",
+     "require-dev": {
+        "phpdocumentor/phpdocumentor": "2.*"
+    },
+
+    "license": "Beerware",
+    "require": {},
+    "autoload":{
+    	"psr-4":{
+    		"Kontroler\\": "Kontroler/"
+    	}
+    }
+}
