@@ -33,7 +33,8 @@
         <section>
             <h2>Menu Napoje</h2>
             <article style="height: 700px; ">
-                <br><br><br><br><br>
+                <h4>Kliknij by złożyć szybkie zamówienie!!</h4>
+                <br>
 
 
                    <?php
@@ -41,24 +42,39 @@
                         "<table style=\"width:100%; text-align: center;\" >
                              <tr>
                                 <td>  
-                                    <a href =\"product.html\">
-                                        <img id=\"polecanePic\" src=\"img/cola.jpg\">
-                                    </a>
-                                    <h5>Cola 0,5l</h5>
+                                    <form action=\"add.php\" method=\"POST\">
+                                        <input type=\"hidden\" name=\"product\" value= \"16\" >
+                                        <input type=\"hidden\" name=\"quantity\" value=\"1\" >
+                                        <input type=\"hidden\" name=\"backTo\" value=\"drinkmenu.php\" >
+                                        <button type=\"submit\" style=\"color: transparent; background-color: transparent; border-color: transparent; cursor: default;\">
+                                            <img height=160px width=160px src=\"img/cola.jpg\" />
+                                        </button>
+                                        <h5>Cola 0,5l - 3 zł</h5>
+                                    </form>      
                                 </td>
 
                                 <td>  
-                                    <a href =\"product.html\">
-                                        <img id=\"polecanePic\" src=\"img/orange.jpg\">
-                                    </a>
-                                    <h5>Sok pomarańczowy 0,5l</h5>
+                                    <form action=\"add.php\" method=\"POST\">
+                                        <input type=\"hidden\" name=\"product\" value= \"17\" >
+                                        <input type=\"hidden\" name=\"quantity\" value=\"1\" >
+                                        <input type=\"hidden\" name=\"backTo\" value=\"drinkmenu.php\" >
+                                        <button type=\"submit\" style=\"color: transparent; background-color: transparent; border-color: transparent; cursor: default;\">
+                                            <img height=160px width=160px src=\"img/orange.jpg\" />
+                                        </button>
+                                        <h5>Sok pomarańczowy 0,5l - 5 zł</h5>
+                                    </form>      
                                 </td>
 
                                 <td>  
-                                    <a href =\"product.html\">
-                                       <img id=\"polecanePic\" src=\"img/sprite.jpg\">
-                                    </a>
-                                    <h5>Sprite 0,5l</h5>
+                                    <form action=\"add.php\" method=\"POST\">
+                                        <input type=\"hidden\" name=\"product\" value= \"20\" >
+                                        <input type=\"hidden\" name=\"quantity\" value=\"1\" >
+                                        <input type=\"hidden\" name=\"backTo\" value=\"drinkmenu.php\" >
+                                        <button type=\"submit\" style=\"color: transparent; background-color: transparent; border-color: transparent; cursor: default;\">
+                                            <img height=160px width=160px src=\"img/sprite.jpg\" />
+                                        </button>
+                                        <h5>Sprite 0,5l - 3 zł</h5>
+                                    </form>      
                                 </td>
                             </tr>
 
@@ -66,31 +82,44 @@
 
                              <tr>
                                 <td>  
-                                    <a href =\"product.html\">
-                                        <img id=\"polecanePic\" src=\"img/piwo.jpg\">
-                                    </a>
-                                    <h5>Piwo pszeniczne 0,5l</h5>
+                                    <form action=\"add.php\" method=\"POST\">
+                                        <input type=\"hidden\" name=\"product\" value= \"18\" >
+                                        <input type=\"hidden\" name=\"quantity\" value=\"1\" >
+                                        <input type=\"hidden\" name=\"backTo\" value=\"drinkmenu.php\" >
+                                        <button type=\"submit\" style=\"color: transparent; background-color: transparent; border-color: transparent; cursor: default;\">
+                                            <img height=160px width=160px src=\"img/piwo.jpg\" />
+                                        </button>
+                                        <h5>Piwo pszeniczne 0,5l - 5 zł</h5>
+                                    </form>      
+                                </td>
+                               
+                                <td>  
+                                    <form action=\"add.php\" method=\"POST\">
+                                        <input type=\"hidden\" name=\"product\" value= \"19\" >
+                                        <input type=\"hidden\" name=\"quantity\" value=\"1\" >
+                                        <input type=\"hidden\" name=\"backTo\" value=\"drinkmenu.php\" >
+                                        <button type=\"submit\" style=\"color: transparent; background-color: transparent; border-color: transparent; cursor: default;\">
+                                            <img height=160px width=160px src=\"img/woda.jpg\" />
+                                        </button>
+                                        <h5>Woda niegazowana 0,5l - 2 zł</h5>
+                                    </form>      
                                 </td>
 
                                 <td>  
-                                    <a href =\"product.html\">
-                                        <img id=\"polecanePic\" src=\"img/woda.jpg\">
-                                    </a>
-                                    <h5>Woda niegazowana 0,5l</h5>
-                                </td>
-
-                                <td>  
-                                    <a href =\"product.html\">
-                                       <img id=\"polecanePic\" src=\"img/herbata.png\">
-                                    </a>
-                                    <h5>Herbata czarna 250mlK</h5>
+                                    <form action=\"add.php\" method=\"POST\">
+                                        <input type=\"hidden\" name=\"product\" value= \"21\" >
+                                        <input type=\"hidden\" name=\"quantity\" value=\"1\" >
+                                        <input type=\"hidden\" name=\"backTo\" value=\"drinkmenu.php\" >
+                                        <button type=\"submit\" style=\"color: transparent; background-color: transparent; border-color: transparent; cursor: default;\">
+                                            <img height=160px width=160px src=\"img/herbata.png\" />
+                                        </button>
+                                        <h5>Herbata czarna 250ml - 4 zł</h5>
+                                    </form>      
                                 </td>
                             </tr>";
 
+                    ?>  
 
-
-
-                    ?>            
             </article>
 
         </section>

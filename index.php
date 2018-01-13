@@ -43,13 +43,8 @@
 
 
                    <?php
-                        echo 
-
-                        "
-                                    
-
-
-                        <table style=\"width:100%; text-align: center;\" >
+                        echo
+                        "<table style=\"width:100%; text-align: center;\" >
                             <tr>
                                 <td>  
                                     <form action=\"add.php\" method=\"POST\">
