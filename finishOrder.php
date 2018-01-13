@@ -56,6 +56,7 @@
 
 
 
+
 //to na samym końcu
     $stat = 'zlozone';
     $Zamowienie->setStatZamowienia($stat);

@@ -57,6 +57,15 @@ class Zamowienie {
          mysqli_query($link, $sql);
     } 
 
+    function getNewZamowienie() { 
+    	 require 'DB/connection.php';
+         $sql = "SELECT IdZamowienie FROM Zamowienie WHERE stat = 'nowe'";
+         $result = mysqli_query($link, $sql);
+	     $ro=mysqli_fetch_row($result);
+	     $IdZamowienie = $ro[0];
+         return $IdZamowienie;
+    } 
+
     function setKwotaZamowienia($kwota) { //zakłada ze jest już NOWE
     	require 'DB/connection.php';
         $sql = "UPDATE Zamowienie SET Kwota='$kwota' WHERE stat ='nowe'" ;

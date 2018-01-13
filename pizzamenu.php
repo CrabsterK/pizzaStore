@@ -90,7 +90,6 @@
                     }
                     echo "</table>";
                 ?> 
-<input type="button" style="background:url(http://cdn.sstatic.net/stackexchange/img/favicon.ico);" onclick="alert('clicked')"/>
 
 
             </article>

@@ -35,30 +35,53 @@
             <h2>Promocje</h2>
             
            <article style="height: 700px; ">
-                 <br><br><br> <br>
+                 <h4>Promocja! Jeden rozmiar pizzy, w cenie małej!!</h4>
+             
                   <?php
                         echo 
-                        "<table style=\"width:100%; text-align: center;\" >
+                        "
+                        <table style=\"width:100%; text-align: center;\" >
                              <tr>
                                 <td>  
                                     <h3>Sałatka grecka!</h3>
-                                    <a href =\"product.html\">
+                                    <h4>12 zł!</h4>
+                                    <a href =\"#\">
                                         <img id=\"polecanePic\" src=\"img/greek.jpg\">
                                     </a>
+                                    <form action=\"add.php\" method=\"POST\">
+                                        <input type=\"hidden\" name=\"product\" value= \"1\" >
+                                        <input type=\"hidden\" name=\"quantity\" value=\"1\" >
+                                        <input type=\"hidden\" name=\"backTo\" value=\"promocje.php\" >
+                                        <input type=\"submit\" value=\"Zamów\" name=\"add\" class=\"btn\">
+                                    </form>
                                 </td>
 
                                 <td>  
                                     <h3>Pizza hawajska!</h3>
-                                    <a href =\"product.html\">
+                                    <h4>21 zł!</h4>
+                                    <a href =\"#\">
                                         <img id=\"polecanePic\" src=\"img/hawai.jpg\">
                                     </a>
+                                     <form action=\"add.php\" method=\"POST\">
+                                        <input type=\"hidden\" name=\"product\" value= \"11\" >
+                                        <input type=\"hidden\" name=\"quantity\" value=\"1\" >
+                                        <input type=\"hidden\" name=\"backTo\" value=\"promocje.php\" >
+                                        <input type=\"submit\" value=\"Zamów\" name=\"add\" class=\"btn\">
+                                    </form>
                                 </td>
 
                                 <td>  
                                     <h3>Pizza peperoni!</h3>
-                                    <a href =\"product.html\">
+                                    <h4>18 zł!</h4>
+                                    <a href =\"#\">
                                         <img id=\"polecanePic\" src=\"img/peperoni.jpg\">
                                     </a>
+                                     <form action=\"add.php\" method=\"POST\">
+                                        <input type=\"hidden\" name=\"product\" value= \"10\" >
+                                        <input type=\"hidden\" name=\"quantity\" value=\"1\" >
+                                        <input type=\"hidden\" name=\"backTo\" value=\"promocje.php\" >
+                                        <input type=\"submit\" value=\"Zamów\" name=\"add\" class=\"btn\">
+                                    </form>
                                 </td>
                             </tr>";
                     ?>                    

@@ -38,69 +38,96 @@
             <h2>Polecane</h2>
             
             <article style="height: 700px; ">
-                 <h4>Promocja! Jeden rozmiar pizzy, w cenie małej!!</h4>
+                 <h4>Kliknij by złożyć szybkie zamówienie!!</h4>
                  <br>
 
 
                    <?php
                         echo 
-                        "<table style=\"width:100%; text-align: center;\" >
-                             <tr>
+
+                        "
+                                    
+
+
+                        <table style=\"width:100%; text-align: center;\" >
+                            <tr>
                                 <td>  
-                                    <a href =\"product.html\">
-                                        <img id=\"polecanePic\" src=\"img/pizza1.jpg\">
-                                    </a>
-                                    <h5>PIZZA MIĘSNA</h5>
+                                    <form action=\"add.php\" method=\"POST\">
+                                        <input type=\"hidden\" name=\"product\" value= \"7\" >
+                                        <input type=\"hidden\" name=\"quantity\" value=\"1\" >
+                                        <input type=\"hidden\" name=\"backTo\" value=\"index.php\" >
+                                        <button type=\"submit\" style=\"color: transparent; background-color: transparent; border-color: transparent; cursor: default;\">
+                                            <img height=160px width=160px src=\"img/pizza1.jpg\" />
+                                        </button>
+                                        <h5>PIZZA MIĘSNA</h5>
+                                    </form>      
+                                </td>
+
+                                 <td>  
+                                    <form action=\"add.php\" method=\"POST\">
+                                        <input type=\"hidden\" name=\"product\" value= \"8\" >
+                                        <input type=\"hidden\" name=\"quantity\" value=\"1\" >
+                                        <input type=\"hidden\" name=\"backTo\" value=\"index.php\" >
+                                        <button type=\"submit\" style=\"color: transparent; background-color: transparent; border-color: transparent; cursor: default;\">
+                                            <img height=160px width=160px src=\"img/pizza2.jpg\" />
+                                        </button>
+                                        <h5>PIZZA CAPRICIOSA</h5>
+                                    </form>      
                                 </td>
 
                                 <td>  
-                                    <a href =\"product.html\">
-                                        <img id=\"polecanePic\" src=\"img/pizza2.jpg\">
-                                    </a>
-                                    <h5>PIZZA CAPRICIOSA</h5>
-                                </td>
-
-                                <td>  
-                                    <a href =\"product.html\">
-                                       <img id=\"polecanePic\" src=\"img/pizza3.jpg\">
-                                    </a>
-                                    <h5>PIZZA PEPERONI</h5>
-                                </td>
+                                    <form action=\"add.php\" method=\"POST\">
+                                        <input type=\"hidden\" name=\"product\" value= \"10\" >
+                                        <input type=\"hidden\" name=\"quantity\" value=\"1\" >
+                                        <input type=\"hidden\" name=\"backTo\" value=\"index.php\" >
+                                        <button type=\"submit\" style=\"color: transparent; background-color: transparent; border-color: transparent; cursor: default;\">
+                                            <img height=160px width=160px src=\"img/pizza3.jpg\" />
+                                        </button>
+                                        <h5>PIZZA PEPERONI</h5>
+                                    </form>      
+                                </td> 
                             </tr>
 
 
 
-                             <tr>
+                            <tr>
                                 <td>  
-                                    <a href =\"product.html\">
-                                        <img id=\"polecanePic\" src=\"img/pizza4.jpg\">
-                                    </a>
-                                    <h5>PIZZA RIMINI</h5>
-                                </td>
+                                    <form action=\"add.php\" method=\"POST\">
+                                        <input type=\"hidden\" name=\"product\" value= \"12\" >
+                                        <input type=\"hidden\" name=\"quantity\" value=\"1\" >
+                                        <input type=\"hidden\" name=\"backTo\" value=\"index.php\" >
+                                        <button type=\"submit\" style=\"color: transparent; background-color: transparent; border-color: transparent; cursor: default;\">
+                                            <img height=160px width=160px src=\"img/pizza4.jpg\" />
+                                        </button>
+                                        <h5>PIZZA RIMINI</h5>
+                                    </form>      
+                                </td> 
 
                                 <td>  
-                                    <a href =\"product.html\">
-                                        <img id=\"polecanePic\" src=\"img/pizza5.jpg\">
-                                    </a>
-                                    <h5>PIZZA BARBADOS</h5>
-                                </td>
+                                    <form action=\"add.php\" method=\"POST\">
+                                        <input type=\"hidden\" name=\"product\" value= \"13\" >
+                                        <input type=\"hidden\" name=\"quantity\" value=\"1\" >
+                                        <input type=\"hidden\" name=\"backTo\" value=\"index.php\" >
+                                        <button type=\"submit\" style=\"color: transparent; background-color: transparent; border-color: transparent; cursor: default;\">
+                                            <img height=160px width=160px src=\"img/pizza5.jpg\" />
+                                        </button>
+                                        <h5>PIZZA BARBADOS</h5>
+                                    </form>      
+                                </td> 
 
                                 <td>  
-                                    <a href =\"product.html\">
-                                       <img id=\"polecanePic\" src=\"img/pizza6.jpg\">
-                                    </a>
-                                    <h5>PIZZA TEKSAŃSKI KURCZAK</h5>
-                                </td>
+                                    <form action=\"add.php\" method=\"POST\">
+                                        <input type=\"hidden\" name=\"product\" value= \"14\" >
+                                        <input type=\"hidden\" name=\"quantity\" value=\"1\" >
+                                        <input type=\"hidden\" name=\"backTo\" value=\"index.php\" >
+                                        <button type=\"submit\" style=\"color: transparent; background-color: transparent; border-color: transparent; cursor: default;\">
+                                            <img height=160px width=160px src=\"img/pizza6.jpg\" />
+                                        </button>
+                                        <h5>PPIZZA TEKSAŃSKI KURCZAK</h5>
+                                    </form>      
+                                </td> 
                             </tr>";
-
-
-
-
                     ?>                
-
-
-
-
 
             </article>
 

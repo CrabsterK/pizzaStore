@@ -12,7 +12,6 @@
     $street = $row[1];
     $number = $row[2];
 
-
 ?>
 
 <!DOCTYPE html>
@@ -86,7 +85,7 @@
 
 
                                 $_SESSION['sum'] = $_SESSION['sum'] + $info_row['Cena'] * $row['IloscZamowionych'];
-                                $_SESSION['fullSum'] = $_SESSION['sum'] + 8;
+                                $_SESSION['fullSum'] = $_SESSION['sum'];
                                 echo 
                                 "<td  style=\"border-bottom:1pt solid black;\">
                                   <form action=\"update.php\" method=\"POST\" style=\"float: left\">
@@ -131,7 +130,7 @@
 
                             <tr>
                               <td>
-                                  <input name=\"dostawa\" type=\"radio\" value=\"dostawca\">Dostawca 8 zł<br>
+                                  <input name=\"dostawa\" type=\"radio\" value=\"dostawca\">Dostawca<br>
                                </td>
                               <td>
                                   <input name=\"platnosc\" type=\"radio\" value=\"karta\">Karta płatnicza<br>
@@ -192,7 +191,7 @@
                                       <p class=\"hint\" id=\"streetRequest\"></p>
                                     </td>
                                     <td style=\"border-bottom:1pt solid black;\">Transport:</td>
-                                    <td style=\"border-bottom:1pt solid black; text-align: right\">8 zł</td>
+                                    <td style=\"border-bottom:1pt solid black; text-align: right\">DARMOWA!</td>
                                   </tr>
 
                                   <tr>

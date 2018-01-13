@@ -2,10 +2,10 @@
     require 'DB/connection.php';
     
 
-   
-   
-
-
+    $sql = "SELECT IdZamowienie FROM Zamowienie ORDER BY IdZamowienie DESC LIMIT 1";
+    $result = mysqli_query($link, $sql);
+    $ro=mysqli_fetch_row($result);
+    $IdZamowienie = $ro[0];
 
 ?>
 
@@ -49,7 +49,8 @@
                 <div>
                   <?php
                   $_SESSION['sum'] = 0;
-                    $sql = "SELECT * FROM IloscZamowionych" ;
+
+                    $sql = "SELECT * FROM IloscZamowionych WHERE ZamowienieIdZamowienie = '$IdZamowienie'" ;
                     $result = mysqli_query($link, $sql);
                     if(mysqli_num_rows($result) > 0){
                       echo "<table style=\"width: 80%;  text-align: left\">";
@@ -72,7 +73,7 @@
 
 
                               $_SESSION['sum'] = $_SESSION['sum'] + $info_row['Cena'] * $row['IloscZamowionych'];
-                              $_SESSION['fullprice'] = $_SESSION['sum'] + $_SESSION['sum'];   //TO OGARNĄĆ. DODAĆ CENĘ DOSTAWY
+                              $_SESSION['fullprice'] = $_SESSION['sum'];
                              
                             }
                           }
@@ -83,17 +84,9 @@
                       echo "<table style=\"width: 80%\">";
                         echo "<tr>";
                           echo "<td style=\"width: 70%;\"></td>";
-                          echo "<td style=\"text-align: left\">Wartość koszyka: " . $_SESSION['sum'] . "zł</h3></td>";
-                        echo "</tr>";
-                        echo "<tr>";
-                          echo "<td style=\"width: 70%;\"></td>";
-                          echo "<td style=\"text-align: left\">Koszt przesyłki: " . $_SESSION['sum'] . "zł</h3></td>";
-                        echo "</tr>";
-                        echo "<tr>";
-                          echo "<td style=\"width: 70%;\"></td>";
                           echo "<td style=\"text-align: left\">Całkowita kwota do zapłaty: " . $_SESSION['fullprice']. "zł</h3></td>";
                         echo "</tr>";
-                        echo "</table><br><br>";
+                      echo "</table><br><br>";
 
 
                       #TODO: USUWANIE PRODUKTU
