@@ -1,8 +1,8 @@
-GUI 					V
-generowanie kodu		V
-documentation			
-MVC						
-testy jednostkowe		
-przypadki testowe		
-automatyzacja			
-metryki					
+GUI
+generowanie kodu
+documentation
+MVC
+testy jednostkowe
+przypadki testowe
+automatyzacja
+metryki
